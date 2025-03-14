@@ -1,2 +1,5 @@
-﻿  HelloGL.cpp
-  HelloGL.vcxproj -> C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe
+﻿  GLUTCallbacks.cpp
+  HelloGL.cpp
+  main.cpp
+  Generating Code...
+  HelloGL.vcxproj -> C:\Users\jakea\source\repos\Lopsitey\Module-3\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe
