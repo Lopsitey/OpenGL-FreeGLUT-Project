@@ -6,10 +6,15 @@ HelloGL::HelloGL(int argc, char* argv[])
 	triangleRotation = 0.0f;
 	GLUTCallbacks::Init(this);
 	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE);
 	glutInitWindowSize(800, 800);
+	glutInitWindowPosition(550, 100);//Centered in HD
 	glutCreateWindow("Simple OpenGl Program");
 	glutDisplayFunc(GLUTCallbacks::Display);
-	glutTimerFunc(frameMS, GLUTCallbacks::Timer, frameMS);//16 milliseconds to a frame - 1000ms in a second 1000/60 = 16
+	glutTimerFunc(frameMS, GLUTCallbacks::Timer, frameMS);//16 milliseconds to a frame - 1000ms in a second 1000/16 = 60 - for 60fps
+	glutKeyboardFunc(GLUTCallbacks::Keyboard);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
 	glutMainLoop();
 }
 
@@ -19,13 +24,11 @@ void HelloGL::Display()
 	DrawPolygon();//draws the square
 	DrawTriangle();//draws the triangle
 	glFlush();
+	glutSwapBuffers();
 }
 
 void HelloGL::Update() 
 {
-	rotation += 0.5f;
-	if (rotation >= 360.0f)
-		rotation = 0.0f;
 	glutPostRedisplay();
 }
 
@@ -65,4 +68,18 @@ void HelloGL::DrawTriangle()
 
 HelloGL::~HelloGL(void)
 {
+}
+
+void HelloGL::Keyboard(unsigned char key, int x, int y) 
+{
+	if (key == 'd') 
+	{
+		rotation += 0.5f;
+	}
+	if (key == 'a')
+	{
+		rotation -= 0.5f;
+	}
+	/*if (rotation >= 360.0f)
+		rotation = 0.0f;*/
 }

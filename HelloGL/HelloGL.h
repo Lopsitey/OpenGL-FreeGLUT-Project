@@ -14,6 +14,7 @@ public:
 	void DrawPolygon();
 	void DrawTriangle();
 	void Update();
+	void Keyboard(unsigned char key, int x, int y);
 private:
 	float rotation;
 	float triangleRotation;
