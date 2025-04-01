@@ -34,3 +34,6 @@
 #FreeGLUT
 !freeglut.lib
 !freeglut.dll
+
+#Model Files
+!teapot.obj

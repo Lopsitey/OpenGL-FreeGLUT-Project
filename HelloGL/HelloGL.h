@@ -16,6 +16,8 @@ public:
 	void Display();
 	void Update();
 	void Keyboard(unsigned char key, int x, int y);
+	void InitGL(int argc, char* argv[]);
+	void InitObjects();
 	/*
 	void DrawPolygon();
 	void DrawTriangle();
@@ -26,7 +28,6 @@ public:
 	*/
 private:
 	float rotation;
-	float triangleRotation;
 	Camera* camera;
 	Cube* cube[200];
 	/*
