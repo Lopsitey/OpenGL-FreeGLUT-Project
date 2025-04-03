@@ -4,11 +4,12 @@
 #include <gl/GLU.h>//OpenGL utilities
 #include "GL\freeglut.h"//freeglut library
 #include "Structures.h"
+#include "MeshLoader.h"
 
 class Cube
 {
 public:
-	Cube(float x, float y, float z);
+	Cube(Mesh* mesh, float x, float y, float z);
 	~Cube(void);
 
 	void Draw();
@@ -20,5 +21,6 @@ private:
 	static GLushort indices[];
 	GLfloat _rotation;
 	Vector3 _position;
+	Mesh* _mesh;
 };
 

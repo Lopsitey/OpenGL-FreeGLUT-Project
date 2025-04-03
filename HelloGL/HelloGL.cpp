@@ -41,10 +41,11 @@ HelloGL::HelloGL(int argc, char* argv[])
 {
 	rotation = 0.0f;
 	triangleRotation = 0.0f;
+	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
 	camera = new Camera();//Deleted in the destructor
 	for (int i = 0; i < 200; ++i) 
 	{
-		cube[i] = new Cube(((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+		cube[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 	}
 	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
 	//moves the camera further away than the prior line

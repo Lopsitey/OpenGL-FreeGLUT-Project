@@ -16,8 +16,9 @@ GLushort Cube::indices[] = { 0, 1, 2,  2, 3, 0,      // front
 				7, 4, 3,  3, 2, 7,      // bottom
 				4, 7, 6,  6, 5, 4 };    // back
 
-Cube::Cube(float x, float y, float z)
+Cube::Cube(Mesh* mesh, float x, float y, float z)
 {
+	_mesh = mesh;
 	_rotation = 0.0f;
 	_position.x = x;
 	_position.y = y;
