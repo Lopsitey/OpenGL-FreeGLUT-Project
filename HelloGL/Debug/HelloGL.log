@@ -1,4 +1,19 @@
-﻿  MeshLoader.cpp
+﻿  Cube.cpp
+  GLUTCallbacks.cpp
+  HelloGL.cpp
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(79,2): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(79,2): warning C4154: deletion of an array expression; conversion to pointer supplied
+  main.cpp
+  MeshLoader.cpp
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(16,10): error C3646: 'r': unknown override specifier
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(16,11): error C2059: syntax error: ','
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(16,17): error C2238: unexpected token(s) preceding ';'
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(21,10): error C3646: 'x': unknown override specifier
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(21,11): error C2059: syntax error: ','
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(21,17): error C2238: unexpected token(s) preceding ';'
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(28,10): error C2143: syntax error: missing ';' before '*'
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(28,2): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\Structures.h(28,19): error C2238: unexpected token(s) preceding ';'
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1157,11): error C2144: syntax error: 'void' should be preceded by ';'
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1157,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1157,16): error C2182: 'APIENTRY': this use of 'void' is not valid
@@ -130,15 +145,5 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,11):
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,1): error C2086: 'int WINGDIAPI': redefinition
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,16): error C2182: 'APIENTRY': this use of 'void' is not valid
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,16): error C2086: 'int APIENTRY': redefinition
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,25): error C2146: syntax error: missing ';' before identifier 'glColor3d'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,11): error C2144: syntax error: 'void' should be preceded by ';'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,1): error C2086: 'int WINGDIAPI': redefinition
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,16): error C2182: 'APIENTRY': this use of 'void' is not valid
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,16): error C2086: 'int APIENTRY': redefinition
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,25): error C2146: syntax error: missing ';' before identifier 'glColor3dv'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1177,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1178,11): error C2144: syntax error: 'void' should be preceded by ';'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1178,11): error C1003: error count exceeds 100; stopping compilation
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\GL\gl.h(1176,16): error C1003: error count exceeds 100; stopping compilation
+  Generating Code...

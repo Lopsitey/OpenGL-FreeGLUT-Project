@@ -5,6 +5,7 @@
 #include "GL\freeglut.h"//freeglut library
 #include "Structures.h"
 #include "MeshLoader.h"
+
 class Cube
 {
 public:
@@ -15,6 +16,9 @@ public:
 	void Update();
 	void DrawIndexedCubeAlt();
 private:
+	static Vertex indexedVertices[];
+	static Color indexedColors[];
+	static GLushort indices[];
 	GLfloat _rotation;
 	Vector3 _position;
 	Mesh* _mesh;

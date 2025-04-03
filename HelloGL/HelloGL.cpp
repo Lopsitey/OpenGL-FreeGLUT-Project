@@ -40,27 +40,20 @@ Color HelloGL::colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0,      // v0-v1-v2 (fro
 HelloGL::HelloGL(int argc, char* argv[])
 {
 	rotation = 0.0f;
-	//Cube::Load((char*)"pyramid.txt");
-	//Cube::Load((char*)"teapot.obj");
+	triangleRotation = 0.0f;
 	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
-	for (int i = 0; i < 200; ++i)
+	camera = new Camera();//Deleted in the destructor
+	for (int i = 0; i < 200; ++i) 
 	{
 		cube[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 	}
+	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
+	//moves the camera further away than the prior line
+	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
+	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;//the point the camera is focussed on 
+	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
+	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
 	GLUTCallbacks::Init(this);
-	InitGL(argc, argv);
-	InitObjects();
-	glutMainLoop();
-}
-
-HelloGL::~HelloGL(void)
-{
-	delete[] camera;//Clean up the dynamically allocated Camera object
-	delete* cube;
-}
-
-void HelloGL::InitGL(int argc, char* argv[]) 
-{
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowSize(800, 800);
@@ -77,17 +70,13 @@ void HelloGL::InitGL(int argc, char* argv[])
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
 	glCullFace(GL_BACK);
+	glutMainLoop();
 }
 
-void HelloGL::InitObjects()
+HelloGL::~HelloGL(void)
 {
-	camera = new Camera();//Deleted in the destructor
-	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
-	//moves the camera further away than the prior line
-	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
-	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;//the point the camera is focussed on 
-	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
-	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
+	delete camera;//Clean up the dynamically allocated Camera object
+	delete cube;
 }
 
 void HelloGL::Display() 
@@ -104,20 +93,20 @@ void HelloGL::Display()
 	//DrawCubeArray();
 	//DrawIndexedCube();
 	//DrawCubeArrayAlt();
-	for (int i = 0; i < 200; ++i)
-	{
-		cube[i]->Draw();
-	}
-	glFlush();
-	glutSwapBuffers();
-	}
+    for (int i = 0; i < 200; ++i)
+    {
+        cube[i]->Draw();
+    }
+    glFlush();
+    glutSwapBuffers();
+    }
 
-	void HelloGL::Update() 
-	{
-		for (int i = 0; i < 200; ++i)
-		{
-			cube[i]->Update();
-		}
+    void HelloGL::Update() 
+    {
+        for (int i = 0; i < 200; ++i)
+        {
+            cube[i]->Update();
+        }
 	glLoadIdentity();
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
 	glutPostRedisplay();

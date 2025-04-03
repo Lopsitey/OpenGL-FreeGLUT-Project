@@ -1,6 +1,4 @@
 #pragma once
-#include <GL/gl.h> // Include the OpenGL header for GLfloat
-
 struct Vector3
 {
 	float x, y, z;
@@ -23,7 +21,7 @@ struct Vertex
 	GLfloat x, y, z;
 };
 
-struct Mesh 
+struct Mesh
 {
 	Vertex* Vertices;
 	Color* Colors;

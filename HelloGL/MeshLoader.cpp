@@ -28,7 +28,7 @@ namespace MeshLoader
 	void LoadColors(ifstream& inFile, Mesh& mesh)
 	{
 		inFile >> mesh.ColorCount;
-		if (mesh.ColorCount > 0) 
+		if (mesh.ColorCount > 0)
 		{
 			mesh.Colors = new Color[mesh.ColorCount];
 			for (int i = 0; i < mesh.ColorCount; ++i)
@@ -43,7 +43,7 @@ namespace MeshLoader
 	void LoadIndices(ifstream& inFile, Mesh& mesh)
 	{
 		inFile >> mesh.IndexCount;
-		if (mesh.IndexCount > 0) 
+		if (mesh.IndexCount > 0)
 		{
 			mesh.Indices = new GLushort[mesh.IndexCount];
 			for (int i = 0; i < mesh.IndexCount; ++i)
@@ -53,14 +53,14 @@ namespace MeshLoader
 		}
 	}
 
-    Mesh* MeshLoader::Load(char* path)
-    {
+	Mesh* MeshLoader::Load(char* path)
+	{
 		Mesh* mesh = new Mesh();
 
 		ifstream inFile;
 		inFile.open(path);
 
-		if (!inFile.good())  
+		if (!inFile.good())
 		{
 			cerr << "Can't open texture file " << path << endl;
 			return nullptr;
@@ -73,5 +73,5 @@ namespace MeshLoader
 		inFile.close();
 
 		return mesh;
-    }
+	}
 }
