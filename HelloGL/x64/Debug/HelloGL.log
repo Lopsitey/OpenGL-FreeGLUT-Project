@@ -1,4 +1,374 @@
-﻿  HelloGL.cpp
+﻿  Cube.cpp
+  GLUTCallbacks.cpp
+  HelloGL.cpp
   main.cpp
+  MeshLoader.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,25): error C2146: syntax error: missing ';' before identifier 'glAccum'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,25): error C2146: syntax error: missing ';' before identifier 'glAlphaFunc'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1158,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1159,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1159,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1159,11): error C2146: syntax error: missing ';' before identifier 'GLboolean'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,25): error C2146: syntax error: missing ';' before identifier 'glArrayElement'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1160,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,25): error C2146: syntax error: missing ';' before identifier 'glBegin'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1161,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,25): error C2146: syntax error: missing ';' before identifier 'glBindTexture'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1162,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,25): error C2146: syntax error: missing ';' before identifier 'glBitmap'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1163,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,25): error C2146: syntax error: missing ';' before identifier 'glBlendFunc'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1164,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,25): error C2146: syntax error: missing ';' before identifier 'glCallList'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1165,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,25): error C2146: syntax error: missing ';' before identifier 'glCallLists'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1166,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,25): error C2146: syntax error: missing ';' before identifier 'glClear'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1167,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,25): error C2146: syntax error: missing ';' before identifier 'glClearAccum'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1168,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,25): error C2146: syntax error: missing ';' before identifier 'glClearColor'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1169,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,25): error C2146: syntax error: missing ';' before identifier 'glClearDepth'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1170,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,16): error C2086: 'int APIENTRY': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,16):
+      see declaration of 'APIENTRY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,25): error C2146: syntax error: missing ';' before identifier 'glClearIndex'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1171,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1172,11): error C2144: syntax error: 'void' should be preceded by ';'
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1172,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1172,1): error C2086: 'int WINGDIAPI': redefinition
+  (compiling source file 'MeshLoader.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1157,1):
+      see declaration of 'WINGDIAPI'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1172,16): error C2182: 'APIENTRY': this use of 'void' is not valid
+  (compiling source file 'MeshLoader.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\GL\gl.h(1172,16): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file 'MeshLoader.cpp')
+  
   Generating Code...
-  HelloGL.vcxproj -> C:\Users\a013867o\source\repos\HelloGL\x64\Debug\HelloGL.exe

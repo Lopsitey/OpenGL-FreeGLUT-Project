@@ -1,4 +1,6 @@
 #pragma once
+#include <GL/gl.h> // Include the OpenGL header for GLfloat
+
 struct Vector3
 {
 	float x, y, z;
