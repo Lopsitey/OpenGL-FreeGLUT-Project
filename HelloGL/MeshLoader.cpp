@@ -1,4 +1,6 @@
 #include "MeshLoader.h"
+#include <fstream>//included in the cpp and not the header since other classes accessing the header don't need it
+#include <iostream>
 
 using namespace std;
 
@@ -7,6 +9,7 @@ namespace MeshLoader
 	void LoadVertices(ifstream& inFile, Mesh& mesh);
 	void LoadColors(ifstream& inFile, Mesh& mesh);
 	void LoadIndices(ifstream& inFile, Mesh& mesh);
+	void LoadCoords(ifstream& inFile, Mesh& mesh);
 
 	void LoadVertices(ifstream& inFile, Mesh& mesh)//file and mesh references
 	{
@@ -53,6 +56,20 @@ namespace MeshLoader
 		}
 	}
 
+	void LoadCoords(ifstream& inFile, Mesh& mesh)
+	{
+		inFile >> mesh.TextCoordinateCount;
+		if (mesh.TextCoordinateCount > 0)
+		{
+			mesh.TexCoords = new TextCoordinate[mesh.TextCoordinateCount];
+			for (int i = 0; i < mesh.TextCoordinateCount; ++i)
+			{
+				inFile >> mesh.TexCoords[i].u;
+				inFile >> mesh.TexCoords[i].v;
+			}
+		}
+	}
+
 	Mesh* MeshLoader::Load(char* path)
 	{
 		Mesh* mesh = new Mesh();
@@ -69,6 +86,9 @@ namespace MeshLoader
 		LoadVertices(inFile, *mesh);
 		LoadColors(inFile, *mesh);
 		LoadIndices(inFile, *mesh);
+		LoadCoords(inFile, *mesh);
+
+		cout << path << " LOADED" << endl;
 
 		inFile.close();
 

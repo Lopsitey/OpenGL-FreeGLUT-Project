@@ -1,0 +1,48 @@
+#include "Texture2D.h"
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+Texture2D::Texture2D()
+{
+}
+
+Texture2D::~Texture2D(void)
+{
+	glDeleteTextures(1, &_ID);//Delete the texture after use
+	delete[] tempTextureData;//Delete the temporary texture data array which stored the contents of the file
+}
+
+bool Texture2D::Load(char* path, int width, int height)
+{
+	int fileSize;
+	ifstream inFile;
+	_width = width;
+	_height = height;
+
+	inFile.open(path,ios::binary);//Open the file in binary mode
+	if (!inFile.good()) 
+	{
+		cerr << "Error: Texture file not found" << endl;
+		return false;
+	
+	}
+
+	inFile.seekg(0,ios::end);//Seek to the end of the file
+	fileSize = (int)inFile.tellg();//Gets the size of the file
+
+	tempTextureData = new char[fileSize];//Creates an array ready to hold the entire file
+
+	inFile.seekg(0, ios::beg);//Go back to the start of the file
+	inFile.read(tempTextureData, fileSize);//Read the file into the array
+	inFile.close();//Close the file
+
+	cout << path<< " LOADED\n SIZE: " << fileSize << endl;
+
+	glGenTextures(1, &_ID);//Generate a texture ID, which is used to reference and manipulate the texture throughout the program
+	glBindTexture(GL_TEXTURE_2D, _ID);//Bind the texture ID
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Create the texture with the given parameters
+
+	return true;
+}

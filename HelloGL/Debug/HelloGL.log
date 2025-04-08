@@ -1,2 +1,4 @@
-﻿  Cube.cpp
+﻿  HelloGL.cpp
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(67,2): warning C4154: deletion of an array expression; conversion to pointer supplied
   HelloGL.vcxproj -> C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe

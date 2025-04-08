@@ -1,4 +1,6 @@
 #include "HelloGL.h"
+#include "GLUTCallbacks.h"//not actually used in the header so can be included in the cpp instead
+#include "MeshLoader.h"
 /*
 Vertex HelloGL::vertices[] = { 1, 1, 1,  -1, 1, 1,  -1,-1, 1,      // v0-v1-v2 (front)
 				-1,-1, 1,   1,-1, 1,   1, 1, 1,      // v2-v3-v0
@@ -39,20 +41,34 @@ Color HelloGL::colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0,      // v0-v1-v2 (fro
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
-	rotation = 0.0f;
-	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt"); 
-	camera = new Camera();//Deleted in the destructor
-	for (int i = 0; i < 200; ++i) 
+	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt"); //Load the mesh from the file
+	Mesh* triangleMesh = MeshLoader::Load((char*)"pyramid.txt"); //Load the mesh from the file
+	Texture2D* texture = new Texture2D();
+	texture->Load((char*)"penguins.raw", 512, 512);
+
+	for (int i = 0; i < 200; ++i)
 	{
-		cube[i] = new Cube(cubeMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+		objects[i] = new Cube(cubeMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);//instansiating a child of the parent class SceneObject
 	}
-	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
-	//moves the camera further away than the prior line
-	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
-	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;//the point the camera is focussed on 
-	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
-	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
+	for (int i = 200; i < 400; ++i)
+	{
+		objects[i] = new Pyramid(triangleMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+	}
+
+	InitGL(argc, argv);//initialises the OpenGL settings
+	InitObjects();
 	GLUTCallbacks::Init(this);
+	glutMainLoop();
+}
+
+HelloGL::~HelloGL(void)
+{
+	delete camera;//Clean up the dynamically allocated Camera object
+	delete[] objects;//for deleting an array
+}
+
+void HelloGL::InitGL(int argc, char* argv[])
+{
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowSize(800, 800);
@@ -66,16 +82,22 @@ HelloGL::HelloGL(int argc, char* argv[])
 	glViewport(0, 0, 800, 800);//sets the viewport to the entire window
 	gluPerspective(45, 1, 0.5f, 1000);//45 fov, 1 aspect ratio, 0.5 near clipping plane, 1000 far clipping plane
 	glMatrixMode(GL_MODELVIEW);
-	glEnable(GL_CULL_FACE);
+	glEnable(GL_TEXTURE_2D);//enables 2D texturing
 	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);//removes the back faces of the polygons
 	glCullFace(GL_BACK);
-	glutMainLoop();
 }
 
-HelloGL::~HelloGL(void)
+void HelloGL::InitObjects()
 {
-	delete camera;//Clean up the dynamically allocated Camera object
-	delete cube;
+	rotation = 0.0f;//default rotation
+	camera = new Camera();//Deleted in the destructor
+	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
+	//moves the camera further away than the prior line
+	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
+	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;//the point the camera is focussed on 
+	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
+	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
 }
 
 void HelloGL::Display() 
@@ -92,19 +114,19 @@ void HelloGL::Display()
 	//DrawCubeArray();
 	//DrawIndexedCube();
 	//DrawCubeArrayAlt();
-    for (int i = 0; i < 200; ++i)
+    for (int i = 0; i < 400; ++i)
     {
-        cube[i]->Draw();
+        objects[i]->Draw();
     }
     glFlush();
     glutSwapBuffers();
-    }
+}
 
     void HelloGL::Update() 
     {
-        for (int i = 0; i < 200; ++i)
+        for (int i = 0; i < 400; ++i)
         {
-            cube[i]->Update();
+            objects[i]->Update();
         }
 	glLoadIdentity();
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
@@ -182,7 +204,7 @@ void HelloGL::DrawTriangle()
 
 void HelloGL::DrawCube()
 {
-	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the cube's y axis but makes it spin left and right
+	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the object's y axis but makes it spin left and right
 	glBegin(GL_TRIANGLES);
 	// face v0-v1-v2
 	glColor3f(1, 1, 1);
@@ -279,7 +301,7 @@ void HelloGL::DrawCube()
 void HelloGL::DrawCubeArray() 
 {
 	glPushMatrix();
-	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the cube's y axis but makes it spin left and right
+	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the object's y axis but makes it spin left and right
 	glBegin(GL_TRIANGLES);
 	for (int i = 0; i < 36; ++i) 
 	{
@@ -298,7 +320,7 @@ void HelloGL::DrawCubeArray()
 void HelloGL::DrawIndexedCube() 
 {
 	glPushMatrix();
-	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the cube's y axis but makes it spin left and right
+	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the object's y axis but makes it spin left and right
 	glBegin(GL_TRIANGLES);
 	for (int i = 0; i < 36; ++i)
 	{
@@ -322,7 +344,7 @@ void HelloGL::DrawCubeArrayAlt()
 	glColorPointer(3, GL_FLOAT, 0, colors);
 
 	glPushMatrix();
-	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the cube's y axis but makes it spin left and right
+	glRotatef(rotation, 0.0f, rotation, 0.0f);//rotates the object's y axis but makes it spin left and right
 	glDrawArrays(GL_TRIANGLES, 0, 36);
 	glPopMatrix();
 

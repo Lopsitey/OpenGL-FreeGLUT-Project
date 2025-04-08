@@ -1,5 +1,6 @@
 #pragma once
 #include "Cube.h"
+#include "Pyramid.h"
 #define frameMS 16
 
 class HelloGL
@@ -21,9 +22,9 @@ public:
 	void DrawCubeArrayAlt();
 	*/
 private:
-	float rotation;
+	float rotation = 0.0f;
 	Camera* camera;
-	Cube* cube[200];
+	SceneObject* objects[400];
 	/*
 	static Vertex vertices[];
 	static Color colors[];
