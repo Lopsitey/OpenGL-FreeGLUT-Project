@@ -40,8 +40,7 @@ Color HelloGL::colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0,      // v0-v1-v2 (fro
 HelloGL::HelloGL(int argc, char* argv[])
 {
 	rotation = 0.0f;
-	triangleRotation = 0.0f;
-	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt");
+	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt"); 
 	camera = new Camera();//Deleted in the destructor
 	for (int i = 0; i < 200; ++i) 
 	{

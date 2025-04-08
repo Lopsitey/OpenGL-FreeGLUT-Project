@@ -31,8 +31,6 @@ Cube::~Cube(void)
 
 void Cube::Draw()
 {
-	glTranslatef(_position.x, _position.y, _position.z);
-	glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
 	DrawIndexedCubeAlt();
 }
 
@@ -55,6 +53,8 @@ void Cube::DrawIndexedCubeAlt()
 	//therefore, if you wanted to change the colour of the third side you would have to change the third value in the indices array to access a different colour
 
 	glPushMatrix();
+	glTranslatef(_position.x, _position.y, _position.z);
+	glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
 	glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_SHORT, indices);//draw mode, side count, indices type, indices 
 	glPopMatrix();
 

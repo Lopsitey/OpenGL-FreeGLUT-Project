@@ -1,10 +1,4 @@
 #pragma once
-#include <Windows.h>//OpenGL on windows
-#include <gl/GL.h>//OpenGL itself
-#include <gl/GLU.h>//OpenGL utilities
-#include "GL\freeglut.h"//freeglut library
-#include "GLUTCallbacks.h"
-#include "Structures.h"
 #include "Cube.h"
 #define frameMS 16
 
