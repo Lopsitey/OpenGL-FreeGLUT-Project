@@ -85,8 +85,9 @@ namespace MeshLoader
 
 		LoadVertices(inFile, *mesh);
 		LoadColors(inFile, *mesh);
-		LoadIndices(inFile, *mesh);
-		LoadCoords(inFile, *mesh);
+		LoadCoords(inFile, *mesh);//Swapping these lets the pyramids load in because they're untextured at the moment
+		LoadIndices(inFile, *mesh);//The coords then aren't loaded into the cube so it gets no texture and is rendered empty
+		
 
 		cout << path << " LOADED" << endl;
 

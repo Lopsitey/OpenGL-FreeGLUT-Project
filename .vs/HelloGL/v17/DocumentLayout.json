@@ -7,52 +7,60 @@
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\SceneObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\SceneObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\TGALoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\TGALoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\MeshLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -74,67 +82,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 12,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TGALoader.h",
+              "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.h",
+              "RelativeDocumentMoniker": "HelloGL\\TGALoader.h",
+              "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.h",
+              "RelativeToolTip": "HelloGL\\TGALoader.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-10T16:04:34.54Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "TGALoader.cpp",
+              "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.cpp",
+              "RelativeDocumentMoniker": "HelloGL\\TGALoader.cpp",
+              "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.cpp",
+              "RelativeToolTip": "HelloGL\\TGALoader.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEUAAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-10T16:06:05.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Texture2D.h",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h",
               "RelativeDocumentMoniker": "HelloGL\\Texture2D.h",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h",
               "RelativeToolTip": "HelloGL\\Texture2D.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-08T16:56:28.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Texture2D.cpp",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp",
               "RelativeDocumentMoniker": "HelloGL\\Texture2D.cpp",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp",
               "RelativeToolTip": "HelloGL\\Texture2D.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAA5AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-08T17:08:16.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "SceneObject.h",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h",
               "RelativeDocumentMoniker": "HelloGL\\SceneObject.h",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h",
               "RelativeToolTip": "HelloGL\\SceneObject.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-08T14:15:09.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "SceneObject.cpp",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.cpp",
               "RelativeDocumentMoniker": "HelloGL\\SceneObject.cpp",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.cpp",
               "RelativeToolTip": "HelloGL\\SceneObject.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-08T14:15:14.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Pyramid.h",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.h",
               "RelativeDocumentMoniker": "HelloGL\\Pyramid.h",
@@ -147,20 +177,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Pyramid.cpp",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp",
               "RelativeDocumentMoniker": "HelloGL\\Pyramid.cpp",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp",
               "RelativeToolTip": "HelloGL\\Pyramid.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-08T14:42:21.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Cube.h",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.h",
               "RelativeDocumentMoniker": "HelloGL\\Cube.h",
@@ -179,7 +209,7 @@
               "RelativeDocumentMoniker": "HelloGL\\Cube.cpp",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp",
               "RelativeToolTip": "HelloGL\\Cube.cpp",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAAOAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAIAwwBIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-27T19:47:47.501Z",
               "EditorCaption": ""
@@ -192,48 +222,22 @@
               "RelativeDocumentMoniker": "HelloGL\\MeshLoader.h",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.h",
               "RelativeToolTip": "HelloGL\\MeshLoader.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-03T15:17:47.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "MeshLoader.cpp",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp",
               "RelativeDocumentMoniker": "HelloGL\\MeshLoader.cpp",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp",
               "RelativeToolTip": "HelloGL\\MeshLoader.cpp",
-              "ViewState": "AQIAACsAAAAAAAAAAAAIwEQAAAAEAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAwDIAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-03T15:17:53.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Structures.h",
-              "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
-              "RelativeDocumentMoniker": "HelloGL\\Structures.h",
-              "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
-              "RelativeToolTip": "HelloGL\\Structures.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-27T19:41:58.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HelloGL.h",
-              "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
-              "RelativeDocumentMoniker": "HelloGL\\HelloGL.h",
-              "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
-              "RelativeToolTip": "HelloGL\\HelloGL.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T15:44:14.967Z",
               "EditorCaption": ""
             },
             {
@@ -244,14 +248,38 @@
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
               "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp",
               "RelativeToolTip": "HelloGL\\HelloGL.cpp",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAwwDoAAAAPAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFMAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-06T15:59:15.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
+              "Title": "Structures.h",
+              "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
+              "RelativeDocumentMoniker": "HelloGL\\Structures.h",
+              "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
+              "RelativeToolTip": "HelloGL\\Structures.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T19:41:58.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HelloGL.h",
+              "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
+              "RelativeDocumentMoniker": "HelloGL\\HelloGL.h",
+              "ToolTip": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
+              "RelativeToolTip": "HelloGL\\HelloGL.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-06T15:44:14.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "GLUTCallbacks.h",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.h",
               "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.h",
@@ -259,12 +287,11 @@
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T16:20:44.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T16:20:44.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "GLUTCallbacks.cpp",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.cpp",
               "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.cpp",
@@ -272,12 +299,11 @@
               "RelativeToolTip": "HelloGL\\GLUTCallbacks.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T16:32:23.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T16:32:23.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\a013867o\\Documents\\GitHub\\OpenGL-FreeGLUT-Project\\HelloGL\\main.cpp",
               "RelativeDocumentMoniker": "HelloGL\\main.cpp",
@@ -285,8 +311,7 @@
               "RelativeToolTip": "HelloGL\\main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T15:49:30.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T15:49:30.145Z"
             }
           ]
         }

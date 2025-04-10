@@ -41,23 +41,9 @@ Color HelloGL::colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0,      // v0-v1-v2 (fro
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
-	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt"); //Load the mesh from the file
-	Mesh* triangleMesh = MeshLoader::Load((char*)"pyramid.txt"); //Load the mesh from the file
-	Texture2D* texture = new Texture2D();
-	texture->Load((char*)"penguins.raw", 512, 512);
-
-	for (int i = 0; i < 200; ++i)
-	{
-		objects[i] = new Cube(cubeMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);//instansiating a child of the parent class SceneObject
-	}
-	for (int i = 200; i < 400; ++i)
-	{
-		objects[i] = new Pyramid(triangleMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
-	}
-
+	GLUTCallbacks::Init(this);
 	InitGL(argc, argv);//initialises the OpenGL settings
 	InitObjects();
-	GLUTCallbacks::Init(this);
 	glutMainLoop();
 }
 
@@ -90,6 +76,22 @@ void HelloGL::InitGL(int argc, char* argv[])
 
 void HelloGL::InitObjects()
 {
+	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt"); //Load the mesh from the file
+	Mesh* triangleMesh = MeshLoader::Load((char*)"pyramid.txt"); //Load the mesh from the file
+	TGALoader* textureTGA = new TGALoader();
+	Texture2D* texture = new Texture2D();
+	texture->Load((char*)"penguins.raw", 512, 512);
+	textureTGA->Load((char*)"penguins.tga");//Load the texture from the file
+
+	for (int i = 0; i < 200; ++i)
+	{
+		objects[i] = new Cube(cubeMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);//instansiating a child of the parent class SceneObject
+	}
+	for (int i = 200; i < 400; ++i)
+	{
+		objects[i] = new Pyramid(triangleMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+	}
+
 	rotation = 0.0f;//default rotation
 	camera = new Camera();//Deleted in the destructor
 	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;

@@ -26,7 +26,6 @@ bool Texture2D::Load(char* path, int width, int height)
 	{
 		cerr << "Error: Texture file not found" << endl;
 		return false;
-	
 	}
 
 	inFile.seekg(0,ios::end);//Seek to the end of the file
@@ -42,7 +41,10 @@ bool Texture2D::Load(char* path, int width, int height)
 
 	glGenTextures(1, &_ID);//Generate a texture ID, which is used to reference and manipulate the texture throughout the program
 	glBindTexture(GL_TEXTURE_2D, _ID);//Bind the texture ID
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Create the texture with the given parameters
+	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Create the texture with the given parameters
+	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, width, height, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Build the mipmaps for the texture
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
 	return true;
 }
