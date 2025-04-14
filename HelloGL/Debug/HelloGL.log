@@ -1,22 +1,48 @@
 ﻿  Cube.cpp
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Cube.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Cube.cpp')
+  
   GLUTCallbacks.cpp
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'GLUTCallbacks.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'GLUTCallbacks.cpp')
+  
   HelloGL.cpp
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(53,2): warning C4154: deletion of an array expression; conversion to pointer supplied
-  Pyramid.cpp
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  SceneObject.cpp
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  TGALoader.cpp
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'HelloGL.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'HelloGL.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(53,2): warning C4154: deletion of an array expression; conversion to pointer supplied
   main.cpp
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'main.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'main.cpp')
+  
+  MeshLoader.cpp
+  Pyramid.cpp
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Pyramid.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Pyramid.cpp')
+  
+  SceneObject.cpp
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'SceneObject.cpp')
+  
+C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\HelloGL\SceneObject.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'SceneObject.cpp')
+  
+  Texture2D.cpp
+  TGALoader.cpp
   Generating Code...
-  HelloGL.vcxproj -> C:\Users\a013867o\Documents\GitHub\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe
+  HelloGL.vcxproj -> C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe
