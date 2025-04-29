@@ -3,6 +3,6 @@
 
 namespace MeshLoader
 {
-	Mesh* Load(char* path);
+	Mesh* Load(const char* path);
 };
 

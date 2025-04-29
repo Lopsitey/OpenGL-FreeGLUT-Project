@@ -4,7 +4,7 @@
 class Cube : public SceneObject
 {
 public:
-	Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z);
+	Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z);
 	~Cube(void);
 
 	void Draw();

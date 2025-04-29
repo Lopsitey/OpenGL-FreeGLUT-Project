@@ -14,7 +14,7 @@ Texture2D::~Texture2D(void)
 	delete[] tempTextureData;//Delete the temporary texture data array which stored the contents of the file
 }
 
-bool Texture2D::Load(char* path, int width, int height)
+bool Texture2D::Load(const char* path, int width, int height)
 {
 	int fileSize;
 	ifstream inFile;
@@ -43,8 +43,8 @@ bool Texture2D::Load(char* path, int width, int height)
 	glBindTexture(GL_TEXTURE_2D, _ID);//Bind the texture ID
 	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Create the texture with the given parameters
 	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, width, height, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Build the mipmaps for the texture
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	//glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	//glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
 	return true;
 }

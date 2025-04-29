@@ -70,7 +70,7 @@ namespace MeshLoader
 		}
 	}
 
-	Mesh* MeshLoader::Load(char* path)
+	Mesh* MeshLoader::Load(const char* path)
 	{
 		Mesh* mesh = new Mesh();
 
@@ -85,7 +85,8 @@ namespace MeshLoader
 
 		LoadVertices(inFile, *mesh);
 		LoadColors(inFile, *mesh);
-		LoadCoords(inFile, *mesh);//Swapping these lets the pyramids load in because they're untextured at the moment
+		if (path != "pyramid.txt")//this file has no textures at the moment
+			LoadCoords(inFile, *mesh);//Swapping these lets the pyramids load in because they're untextured at the moment
 		LoadIndices(inFile, *mesh);//The coords then aren't loaded into the cube so it gets no texture and is rendered empty
 		
 

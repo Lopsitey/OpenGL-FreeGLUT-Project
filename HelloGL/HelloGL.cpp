@@ -41,6 +41,7 @@ Color HelloGL::colors[] = { 1, 1, 1,   1, 1, 0,   1, 0, 0,      // v0-v1-v2 (fro
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
+	rotation = 0.0f;
 	GLUTCallbacks::Init(this);
 	InitGL(argc, argv);//initialises the OpenGL settings
 	InitObjects();
@@ -50,7 +51,7 @@ HelloGL::HelloGL(int argc, char* argv[])
 HelloGL::~HelloGL(void)
 {
 	delete camera;//Clean up the dynamically allocated Camera object
-	delete[] objects;//for deleting an array
+	delete* objects;//for deleting an array
 }
 
 void HelloGL::InitGL(int argc, char* argv[])
@@ -76,18 +77,19 @@ void HelloGL::InitGL(int argc, char* argv[])
 
 void HelloGL::InitObjects()
 {
-	Mesh* cubeMesh = MeshLoader::Load((char*)"cube.txt"); //Load the mesh from the file
-	Mesh* triangleMesh = MeshLoader::Load((char*)"pyramid.txt"); //Load the mesh from the file
+	Mesh* cubeMesh = MeshLoader::Load("cube.txt"); //Load the mesh from the file
+	Mesh* triangleMesh = MeshLoader::Load("pyramid.txt"); //Load the mesh from the file
 	TGALoader* textureTGA = new TGALoader();
 	Texture2D* texture = new Texture2D();
-	texture->Load((char*)"penguins.raw", 512, 512);
-	textureTGA->Load((char*)"penguins.tga");//Load the texture from the file
-
-	for (int i = 0; i < 200; ++i)
+	texture->Load("penguins.raw", 512, 512);
+	textureTGA->Load("fern.tga");//Load the texture from the file
+	
+	constexpr int cubeAmount = maxObjects - 100;
+	for (int i = 0; i < cubeAmount; ++i)
 	{
-		objects[i] = new Cube(cubeMesh, texture, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);//instansiating a child of the parent class SceneObject
+		objects[i] = new Cube(cubeMesh, textureTGA, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);//instantiating a child of the parent class SceneObject
 	}
-	for (int i = 200; i < 400; ++i)
+	for (int i = cubeAmount; i < maxObjects; ++i)
 	{
 		objects[i] = new Pyramid(triangleMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 	}
@@ -102,7 +104,7 @@ void HelloGL::InitObjects()
 	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
 }
 
-void HelloGL::Display() 
+void HelloGL::Display() const//can be marked const because it doesn't change any values
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//clears the scene
 	//DrawPolygon();//draws the square
@@ -116,7 +118,8 @@ void HelloGL::Display()
 	//DrawCubeArray();
 	//DrawIndexedCube();
 	//DrawCubeArrayAlt();
-    for (int i = 0; i < 400; ++i)
+	//for (auto& object : objects)
+    for (int i = 0; i < maxObjects; ++i)
     {
         objects[i]->Draw();
     }
@@ -124,9 +127,9 @@ void HelloGL::Display()
     glutSwapBuffers();
 }
 
-    void HelloGL::Update() 
+    void HelloGL::Update()
     {
-        for (int i = 0; i < 400; ++i)
+        for (int i = 0; i < maxObjects; ++i)
         {
             objects[i]->Update();
         }
@@ -169,7 +172,7 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 /*
 void HelloGL::DrawPolygon()
 {
-	glPushMatrix();//isolates the matrix so the calculations don't interfere with the verticies
+	glPushMatrix();//isolates the matrix so the calculations don't interfere with the vertices
 	glTranslatef(0.0f, 0.0f, -5.0f);//moves the camera back 5 units
 	glRotatef(rotation, rotation, 0.0f, rotation);//-1 rotates it right 1 rotates it left
 	glBegin(GL_POLYGON);//begins the draw (with polygon chosen)
@@ -327,8 +330,8 @@ void HelloGL::DrawIndexedCube()
 	for (int i = 0; i < 36; ++i)
 	{
 		//instead of retyping every vertex and colour manually in one big long array we can use an array of colours and an array of vertices
-		//these can then be reused by applying them with the relevant indicies
-		//its like accessing a colour pallete and size chart and then choosing what side to apply what colour and length too
+		//these can then be reused by applying them with the relevant indices
+		//its like accessing a colour palette and size chart and then choosing what side to apply what colour and length too
 		//the indices in this case are being used to access the colours in a specific order whilst they are applied to the sides in a linear order using i to iterate
 		//therefore, if you wanted to change the colour of the third side you would have to change the third value in the indices array to access a different colour
 		glColor3fv(&indexedColors[indices[i]].r);//this function uses a pointer to pull all three values from the colour struct, not just the r value

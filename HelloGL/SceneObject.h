@@ -1,16 +1,16 @@
 #pragma once
 #include "Structures.h"
-#include "Texture2D.h";
-#include "TGALoader.h";
+#include "TGALoader.h"
+#include "Texture2D.h"
 
 class SceneObject
 {
 protected:
 	Mesh* _mesh;
-	Texture2D* _texture;
+	TGALoader* _texture;
 	
 public:
-	SceneObject(Mesh* mesh, Texture2D* texture);
+	SceneObject(Mesh* mesh, TGALoader* texture);
 	virtual ~SceneObject(void);
 
 	virtual void Update();//only needs to be declared virtual in the base class

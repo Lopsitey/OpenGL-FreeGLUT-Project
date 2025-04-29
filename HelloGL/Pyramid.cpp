@@ -6,6 +6,7 @@ Pyramid::Pyramid(Mesh* mesh, float x, float y, float z) : SceneObject(mesh, null
 	_position.x = x;	
 	_position.y = y;
 	_position.z = z;
+	_rotation = 0;
 }
 
 Pyramid::~Pyramid(void)
@@ -25,9 +26,15 @@ void Pyramid::Draw()
 
 	glPushMatrix();
 	glTranslatef(_position.x, _position.y, _position.z);
+	glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
 	glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);//draw mode, side count, indices type, indices
 	glPopMatrix();
 
 	glDisableClientState(GL_COLOR_ARRAY);
 	glDisableClientState(GL_VERTEX_ARRAY);
+}
+
+void Pyramid::Update()
+{
+	_rotation += 0.5f;
 }

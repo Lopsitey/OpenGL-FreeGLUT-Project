@@ -7,7 +7,7 @@ public:
 	Texture2D();
 	~Texture2D(void);
 	
-	bool Load(char* path, int width, int height);
+	bool Load(const char* path, int width, int height);
 
 	GLuint GetID() const { return _ID; }
 	int GetWidth() const { return _width; }

@@ -16,7 +16,7 @@ GLushort Cube::indices[] = { 0, 1, 2,  2, 3, 0,      // front
 				7, 4, 3,  3, 2, 7,      // bottom
 				4, 7, 6,  6, 5, 4 };    // back
 				*/
-Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z) : SceneObject(mesh, texture)
+Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z) : SceneObject(mesh, texture)
 {
 	_mesh = mesh;
 	_texture = texture;

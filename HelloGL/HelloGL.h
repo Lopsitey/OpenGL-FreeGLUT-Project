@@ -8,10 +8,10 @@ class HelloGL
 public:
 	HelloGL(int argc, char* argv[]);
 	~HelloGL(void);
-	void Display();
+	void Display() const;
 	void Update();
 	void Keyboard(unsigned char key, int x, int y);
-	void InitGL(int argc, char* argv[]);
+	static void InitGL(int argc, char* argv[]);
 	void InitObjects();
 	/*
 	void DrawPolygon();
@@ -22,9 +22,10 @@ public:
 	void DrawCubeArrayAlt();
 	*/
 private:
-	float rotation = 0.0f;
+	static constexpr int maxObjects = 250;
+	float rotation;
 	Camera* camera;
-	SceneObject* objects[400];
+	SceneObject* objects[maxObjects];//An array of all the objects to be drawn to the screen
 	/*
 	static Vertex vertices[];
 	static Color colors[];

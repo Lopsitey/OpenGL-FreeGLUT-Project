@@ -7,7 +7,9 @@ public:
 	~Pyramid(void);
 
 	void Draw();
+	void Update();
 private:
 	Vector3 _position;
+	GLfloat _rotation;
 };
 

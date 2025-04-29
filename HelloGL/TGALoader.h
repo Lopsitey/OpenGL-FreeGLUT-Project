@@ -16,7 +16,8 @@ public:
 private:
 	GLuint _ID;//Texture ID
 	int _width, _height;//Width and height of the texture
-	char* tempHeaderData = new char[18]; //18 Bytes is TGA Header Size
+	const int headerSize = 18;//18 Bytes is TGA Header Size
+	char* tempHeaderData; 
 	char* tempTextureData;//Temporary texture data array
 };
 

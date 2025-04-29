@@ -1,6 +1,6 @@
 #include "SceneObject.h"
 
-SceneObject::SceneObject(Mesh* mesh, Texture2D* texture)
+SceneObject::SceneObject(Mesh* mesh, TGALoader* texture)
 {
 	_mesh = mesh;
 	_texture = texture;
