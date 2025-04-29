@@ -127,12 +127,12 @@ void HelloGL::Display() const//can be marked const because it doesn't change any
     glutSwapBuffers();
 }
 
-    void HelloGL::Update()
+void HelloGL::Update()
+{
+    for (int i = 0; i < maxObjects; ++i)
     {
-        for (int i = 0; i < maxObjects; ++i)
-        {
-            objects[i]->Update();
-        }
+        objects[i]->Update();
+    }
 	glLoadIdentity();
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
 	glutPostRedisplay();
