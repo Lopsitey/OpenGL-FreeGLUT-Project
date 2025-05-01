@@ -7,21 +7,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/HelloGL.ilk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/HelloGL.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/HelloGL1.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/vc143.idb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/vc143.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/vc1431.idb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03_[Changes]/vc1431.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="Week 6&#10;&#10;Finished lighting and materials. I also added a function which randomly rotates every object in the scene and properly randomizes every object's location.">
+      <changelist_data name="Jake Astles" email="jakeastles13@gmail.com" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/fern.tga" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/HelloGL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/HelloGL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Cube.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Cube.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Cube.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Cube.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/HelloGL.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/HelloGL.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/GLUTCallbacks.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/GLUTCallbacks.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/GLUTCallbacks.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/GLUTCallbacks.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/MeshLoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/MeshLoader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/MeshLoader.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/MeshLoader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Pyramid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Pyramid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Pyramid.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Pyramid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Structures.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Structures.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/TGALoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/TGALoader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/TGALoader.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/TGALoader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Texture2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Texture2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Texture2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Texture2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/cube.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/cube.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +58,31 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Jake Astles &lt;jakeastles13@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lopsitey&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lopsitey/OpenGL-FreeGLUT-Project.git&quot;,
+    &quot;accountId&quot;: &quot;bda4a6a6-33e4-4b35-b176-0b379a2a1a56&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/a013867o/RiderProjects/OpenGL-FreeGLUT-Project/HelloGL/HelloGL.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -41,16 +90,23 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2wPvwgFZEiTchBbJZKLlkHVrSXy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "C++ Project.HelloGL.executor": "Run",
     "C/C++ Project.HelloGL.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -58,15 +114,23 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\a013867o\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\a013867o\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\a013867o\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="HelloGL" type="CppProject" factoryName="C++ Project">
-      <configuration_1 setup="1">
+      <configuration_1>
         <option name="CONFIGURATION" value="Debug" />
         <option name="PLATFORM" value="x64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
         <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
         <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
@@ -74,11 +138,11 @@
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
       </configuration_1>
-      <configuration_2 setup="1">
+      <configuration_2>
         <option name="CONFIGURATION" value="Debug" />
         <option name="PLATFORM" value="Win32" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
         <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
         <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
@@ -86,16 +150,27 @@
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
       </configuration_2>
+      <configuration_3>
+        <option name="CONFIGURATION" value="Debug" />
+        <option name="PLATFORM" value="x86" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXE_PATH" value="$(TargetPath)" />
+        <option name="PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$(ProjectDir)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
+      </configuration_3>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" />
       <option name="AUTO_SELECT_PRIORITY" value="0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="" />
@@ -106,33 +181,31 @@
       <workItem from="1745956269198" duration="516000" />
       <workItem from="1745956856814" duration="2340000" />
       <workItem from="1745959959032" duration="2351000" />
+      <workItem from="1746117547885" duration="9675000" />
+      <workItem from="1746130516496" duration="51000" />
+      <workItem from="1746130576349" duration="6757000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myShow1" value="true" />
+    <option name="myLimit" value="86400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Bug Fix" />
+    <MESSAGE value="Week 6&#10;&#10;Finished lighting and materials. I also added a function which randomly rotates every object in the scene and properly randomizes every object's location." />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 6&#10;&#10;Finished lighting and materials. I also added a function which randomly rotates every object in the scene and properly randomizes every object's location." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

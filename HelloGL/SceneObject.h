@@ -6,14 +6,13 @@
 class SceneObject
 {
 protected:
-	Mesh* _mesh;
-	TGALoader* _texture;
-	
+    Mesh* _mesh;
+    TGALoader* _texture;
+
 public:
-	SceneObject(Mesh* mesh, TGALoader* texture);
-	virtual ~SceneObject(void);
+    SceneObject(Mesh* mesh, TGALoader* texture);
+    virtual ~SceneObject(void);
 
-	virtual void Update();//only needs to be declared virtual in the base class
-	virtual void Draw();//any derived class can then override it, even children of children
+    virtual void Update(); //only needs to be declared virtual in the base class
+    virtual void Draw(); //any derived class can then override it, even children of children
 };
-

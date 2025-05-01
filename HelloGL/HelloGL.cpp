@@ -1,6 +1,8 @@
 #include "HelloGL.h"
 #include "GLUTCallbacks.h"//not actually used in the header so can be included in the cpp instead
 #include "MeshLoader.h"
+#include <cstdlib>//for rand, srand
+#include <ctime>
 /*
 Vertex HelloGL::vertices[] = { 1, 1, 1,  -1, 1, 1,  -1,-1, 1,      // v0-v1-v2 (front)
 				-1,-1, 1,   1,-1, 1,   1, 1, 1,      // v2-v3-v0
@@ -43,15 +45,16 @@ HelloGL::HelloGL(int argc, char* argv[])
 {
 	rotation = 0.0f;
 	GLUTCallbacks::Init(this);
-	InitGL(argc, argv);//initialises the OpenGL settings
+	InitGL(argc, argv); //initialises the OpenGL settings
 	InitObjects();
+	InitLighting();
 	glutMainLoop();
 }
 
 HelloGL::~HelloGL(void)
 {
-	delete camera;//Clean up the dynamically allocated Camera object
-	delete* objects;//for deleting an array
+	delete camera; //Clean up the dynamically allocated Camera object
+	delete*objects; //for deleting an array
 }
 
 void HelloGL::InitGL(int argc, char* argv[])
@@ -59,19 +62,22 @@ void HelloGL::InitGL(int argc, char* argv[])
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowSize(800, 800);
-	glutInitWindowPosition(550, 100);//Centered in HD
+	glutInitWindowPosition(550, 100); //Centered in HD
 	glutCreateWindow("Simple OpenGl Program");
 	glutDisplayFunc(GLUTCallbacks::Display);
-	glutTimerFunc(frameMS, GLUTCallbacks::Timer, frameMS);//16 milliseconds to a frame - 1000ms in a second 1000/16 = 60 - for 60fps
+	glutTimerFunc(frameMS, GLUTCallbacks::Timer, frameMS);
+	//16 milliseconds to a frame - 1000ms in a second 1000/16 = 60 - for 60fps
 	glutKeyboardFunc(GLUTCallbacks::Keyboard);
-	glMatrixMode(GL_PROJECTION);//the matrix that deals with the camera
+	glMatrixMode(GL_PROJECTION); //the matrix that deals with the camera
 	glLoadIdentity();
-	glViewport(0, 0, 800, 800);//sets the viewport to the entire window
-	gluPerspective(45, 1, 0.5f, 1000);//45 fov, 1 aspect ratio, 0.5 near clipping plane, 1000 far clipping plane
+	glViewport(0, 0, 800, 800); //sets the viewport to the entire window
+	gluPerspective(45, 1, 0.5f, 1000); //45 fov, 1 aspect ratio, 0.5 near clipping plane, 1000 far clipping plane
 	glMatrixMode(GL_MODELVIEW);
-	glEnable(GL_TEXTURE_2D);//enables 2D texturing
+	glEnable(GL_TEXTURE_2D); //enables 2D texturing
 	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);//removes the back faces of the polygons
+	glEnable(GL_CULL_FACE); //removes the back faces of the polygons
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
 	glCullFace(GL_BACK);
 }
 
@@ -79,34 +85,75 @@ void HelloGL::InitObjects()
 {
 	Mesh* cubeMesh = MeshLoader::Load("cube.txt"); //Load the mesh from the file
 	Mesh* triangleMesh = MeshLoader::Load("pyramid.txt"); //Load the mesh from the file
-	TGALoader* textureTGA = new TGALoader();
-	Texture2D* texture = new Texture2D();
+	auto textureTGA = new TGALoader();
+	auto texture = new Texture2D();
 	texture->Load("penguins.raw", 512, 512);
-	textureTGA->Load("fern.tga");//Load the texture from the file
-	
-	constexpr int cubeAmount = maxObjects - 100;
-	for (int i = 0; i < cubeAmount; ++i)
+	textureTGA->Load("fern.tga"); //Load the texture from the file
+	//constexpr int cubeAmount = maxObjects - 100;
+
+	srand(static_cast<unsigned int>(time(nullptr))); //Only need to seed the numbers once
+	for (int i = 0; i < maxObjects; ++i)
 	{
-		objects[i] = new Cube(cubeMesh, textureTGA, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);//instantiating a child of the parent class SceneObject
+		//Random x y and z position for each cube
+		float randX = randFloatRange(-20.0f, 19.9f);
+		float randY = randFloatRange(-10.0f, 9.9f);
+		float randZ = -randFloatRange(0.0f, 99.9f);
+
+		Vector3 randRotAxis = {
+			randFloatRange(1.0f, 10.0f), randFloatRange(1.0f, 10.0f), randFloatRange(1.0f, 10.0f)
+		}; //Rotation axis
+
+		objects[i] = new Cube(cubeMesh, textureTGA, randX, randY, randZ, randRotAxis);
+		//instantiating a child of the parent class SceneObject
 	}
+	/* Deprecated because the pyramids file became outdated as the project progressed
 	for (int i = cubeAmount; i < maxObjects; ++i)
 	{
-		objects[i] = new Pyramid(triangleMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
+	    objects[i] = new Pyramid(triangleMesh, ((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);
 	}
-
-	rotation = 0.0f;//default rotation
-	camera = new Camera();//Deleted in the destructor
-	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
+	*/
+	rotation = 0.0f; //default rotation
+	camera = new Camera(); //Deleted in the destructor
+	camera->eye.x = 0.0f;
+	camera->eye.y = 0.0f;
+	camera->eye.z = 1.0f;
 	//moves the camera further away than the prior line
 	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
-	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;//the point the camera is focussed on 
-	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
+	camera->center.x = 0.0f;
+	camera->center.y = 0.0f;
+	camera->center.z = 0.0f; //the point the camera is focussed on 
+	camera->up.x = 0.0f;
+	camera->up.y = 1.0f;
+	camera->up.z = 0.0f;
 	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
 }
 
-void HelloGL::Display() const//can be marked const because it doesn't change any values
+void HelloGL::InitLighting()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//clears the scene
+	_lightPosition = new Vector4();
+	_lightPosition->x = 0.0;
+	_lightPosition->y = 0.0;
+	_lightPosition->z = 1.0;
+	_lightPosition->w = 0.0;
+
+	_lightData = new Lighting();
+	_lightData->ambient.x = 0.2f;
+	_lightData->ambient.y = 0.2f;
+	_lightData->ambient.z = 0.2f;
+	_lightData->ambient.w = 1.0f;
+	_lightData->diffuse.x = 0.8f;
+	_lightData->diffuse.y = 0.8f;
+	_lightData->diffuse.z = 0.8f;
+	_lightData->diffuse.w = 1.0f;
+	_lightData->specular.x = 0.2f;
+	_lightData->specular.y = 0.2f;
+	_lightData->specular.z = 0.6f; //changed from 0.2 to make random objects shiny
+	_lightData->specular.w = 1.0f;
+}
+
+void HelloGL::Display() const //can be marked const because it doesn't change any values
+{
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //clears the scene
 	//DrawPolygon();//draws the square
 	//DrawTriangle();//draws the triangle
 	/*glPushMatrix();
@@ -127,22 +174,35 @@ void HelloGL::Display() const//can be marked const because it doesn't change any
     glutSwapBuffers();
 }
 
+//Generates a random float in the range [min, max]
+float HelloGL::randFloatRange(float min, float max)
+{
+	float num = (max - min) + min;
+	return (static_cast<float>(rand()) / RAND_MAX) * (max - min) + min;
+}
+
+
 void HelloGL::Update()
 {
     for (int i = 0; i < maxObjects; ++i)
     {
         objects[i]->Update();
     }
-	glLoadIdentity();
-	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
-	glutPostRedisplay();
+    glLoadIdentity();
+    gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z,
+              camera->up.x, camera->up.y, camera->up.z);
+    glutPostRedisplay();
+    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->ambient.x));
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->diffuse.x));
+    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->specular.x));
+    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPosition->x));
 }
 
-void HelloGL::Keyboard(unsigned char key, int x, int y) 
+void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
-	if (key == 'd') 
+	if (key == 'd')
 	{
-		rotation += 0.5f; 
+		rotation += 0.5f;
 		//camera->center.x += 0.1f; - pans the camera right
 		//camera->center.y += 0.1f; - pans the camera up
 		//camera->up.x -= 0.1f;
@@ -154,19 +214,17 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 		//camera->center.y -= 0.1f; - pans the camera down
 		//camera->up.x += 0.1f;
 	}
-	if (key == 'w') 
+	if (key == 'w')
 	{
 		camera->eye.z += 0.1f;
-
 	}
-	if (key == 's') 
+	if (key == 's')
 	{
 		camera->eye.z -= 0.1f;
 	}
 	/*if (rotation >= 360.0f)
-		rotation = 0.0f;*/
+	    rotation = 0.0f;*/
 }
-
 
 
 /*

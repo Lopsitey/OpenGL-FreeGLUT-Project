@@ -16,11 +16,13 @@ GLushort Cube::indices[] = { 0, 1, 2,  2, 3, 0,      // front
 				7, 4, 3,  3, 2, 7,      // bottom
 				4, 7, 6,  6, 5, 4 };    // back
 				*/
-Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z) : SceneObject(mesh, texture)
+
+Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z, Vector3 rotationAxis) : SceneObject(mesh, texture)
 {
 	_mesh = mesh;
 	_texture = texture;
-	_rotation = 0.0f;
+	_rotationSpeed = 0.0f;
+	_rotationAxis = rotationAxis;
 	_position.x = x;
 	_position.y = y;
 	_position.z = z;
@@ -28,22 +30,28 @@ Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z) : SceneObj
 
 Cube::~Cube(void)
 {
-	delete _mesh;//Because it's a pointer which has dynamically allocated objects using new
+	delete _mesh; //Because it's a pointer which has dynamically allocated objects using new
 	//For example, in the MeshLoader: Mesh* mesh = new Mesh();
 }
 
 void Cube::Draw()
 {
 	if (_mesh == nullptr)
-		return;//exits if the mesh hasn't been loaded correctly
+		return; //exits if the mesh hasn't been loaded correctly
 
-	glBindTexture(GL_TEXTURE_2D, _texture->GetID());//binds the texture to the cube so it can be drawn with it
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);//enables the texture to be drawn
+	glBindTexture(GL_TEXTURE_2D, _texture->GetID()); //binds the texture to the cube so it can be drawn with it
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY); //enables the texture to be drawn
 	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_COLOR_ARRAY);
+	glEnableClientState(GL_NORMAL_ARRAY);
+	glNormalPointer(GL_FLOAT, 0, _mesh->Normals);
 	glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
-	glColorPointer(3, GL_FLOAT, 0, _mesh->Colors);
-	glTexCoordPointer(2, GL_FLOAT, 0, _mesh->TexCoords);//binds the texture coordinates to the cube
+	//glColorPointer(3, GL_FLOAT, 0, _mesh->Colors);
+	glTexCoordPointer(2, GL_FLOAT, 0, _mesh->TexCoords); //binds the texture coordinates to the cube
+	InitMaterials();
+	glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->ambient.x));
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->diffuse.x));
+	glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->specular.x));
+	glMaterialf(GL_FRONT, GL_SHININESS, _material->shininess);
 
 	//instead of retyping every vertex and colour manually in one big long array we can use an array of colours and an array of vertices
 	//these can then be reused by applying them with the relevant indicies
@@ -53,16 +61,36 @@ void Cube::Draw()
 
 	glPushMatrix();
 	glTranslatef(_position.x, _position.y, _position.z);
-	glRotatef(_rotation, 1.0f, 0.0f, 0.0f);
-	glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);//draw mode, side count, indices type, indices
+	glRotatef(_rotationSpeed, _rotationAxis.x, _rotationAxis.y, _rotationAxis.z);
+	glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);
+	//draw mode, side count, indices type, indices
 	glPopMatrix();
 
-	glDisableClientState(GL_COLOR_ARRAY);
+	//glDisableClientState(GL_COLOR_ARRAY);
+	glDisableClientState(GL_NORMAL_ARRAY);
 	glDisableClientState(GL_VERTEX_ARRAY);
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);//disables the texture coordinates
+	glDisableClientState(GL_TEXTURE_COORD_ARRAY); //disables the texture coordinates
 }
 
 void Cube::Update()
 {
-	_rotation += 0.1f;
+	_rotationSpeed += 0.8f;
+}
+
+void Cube::InitMaterials()
+{
+	_material = new Material();
+	_material->ambient.x = 0.8f;
+	_material->ambient.y = 0.05f;
+	_material->ambient.z = 0.05f;
+	_material->ambient.w = 1.0f;
+	_material->diffuse.x = 0.8f;
+	_material->diffuse.y = 0.05f;
+	_material->diffuse.z = 0.05f;
+	_material->diffuse.w = 1.0f;
+	_material->specular.x = 1.0f;
+	_material->specular.y = 1.0f;
+	_material->specular.z = 1.0f;
+	_material->specular.w = 1.0f;
+	_material->shininess = 100.0f;
 }

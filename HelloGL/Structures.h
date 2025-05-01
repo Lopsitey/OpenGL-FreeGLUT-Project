@@ -2,61 +2,62 @@
 #include <Windows.h>//OpenGL on windows
 #include <gl/GL.h>//OpenGL itself
 #include <gl/GLU.h>//OpenGL utilities
-#include "GL\freeglut.h"//freeglut library
+#include "GL/freeglut.h"//freeglut library
 
 struct Vector3
 {
-	float x, y, z;
+    float x, y, z;
 };
 
 struct Camera
 {
-	Vector3 eye;
-	Vector3 center;
-	Vector3 up;
+    Vector3 eye;
+    Vector3 center;
+    Vector3 up;
 };
 
+/*
 struct Color
 {
 	GLfloat r, g, b;
 };
-
+*/
 struct Vertex
 {
-	GLfloat x, y, z;
+    GLfloat x, y, z;
 };
 
 struct TextCoordinate
 {
-	GLfloat u, v;
+    GLfloat u, v;
 };
 
 struct Mesh
 {
-	Vertex* Vertices;
-	Color* Colors;
-	GLushort* Indices;
-	TextCoordinate* TexCoords;
-	int TextCoordinateCount;
-	int VertexCount, ColorCount, IndexCount;
+    Vertex* Vertices;
+    Vector3* Normals;
+    GLushort* Indices;
+    TextCoordinate* TexCoords;
+    int TextCoordinateCount;
+    int VertexCount, NormalCount, IndexCount;
 };
 
 struct Vector4
 {
-	float x, y, z, w;
+    float x, y, z, w;
 };
 
 struct Lighting
 {
-	Vector4 ambient;
-	Vector4 diffuse;
-	Vector4 specular;
+    Vector4 ambient;
+    Vector4 diffuse;
+    Vector4 specular;
 };
 
 struct Material
 {
-	Vector4 ambient;
-	Vector4 diffuse;
-	Vector4 specular;
-	GLfloat shininess;
+    Vector4 ambient;
+    Vector4 diffuse;
+    Vector4 specular;
+    GLfloat shininess;
 };
