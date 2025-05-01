@@ -40,3 +40,23 @@ struct Mesh
 	int TextCoordinateCount;
 	int VertexCount, ColorCount, IndexCount;
 };
+
+struct Vector4
+{
+	float x, y, z, w;
+};
+
+struct Lighting
+{
+	Vector4 ambient;
+	Vector4 diffuse;
+	Vector4 specular;
+};
+
+struct Material
+{
+	Vector4 ambient;
+	Vector4 diffuse;
+	Vector4 specular;
+	GLfloat shininess;
+};
