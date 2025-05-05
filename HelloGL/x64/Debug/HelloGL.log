@@ -1,15 +1,5 @@
-﻿GLUTCallbacks.obj : error LNK2019: unresolved external symbol __imp_glutTimerFunc referenced in function "void __cdecl GLUTCallbacks::Timer(int)" (?Timer@GLUTCallbacks@@YAXH@Z)
-HelloGL.obj : error LNK2001: unresolved external symbol __imp_glutTimerFunc
-GLUTCallbacks.obj : error LNK2019: unresolved external symbol __imp_glutGet referenced in function "void __cdecl GLUTCallbacks::Timer(int)" (?Timer@GLUTCallbacks@@YAXH@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowPosition referenced in function "public: void __cdecl HelloGL::InitGL(int,char * * const)" (?InitGL@HelloGL@@QEAAXHQEAPEAD@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowSize referenced in function "public: void __cdecl HelloGL::InitGL(int,char * * const)" (?InitGL@HelloGL@@QEAAXHQEAPEAD@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutInitDisplayMode referenced in function "public: void __cdecl HelloGL::InitGL(int,char * * const)" (?InitGL@HelloGL@@QEAAXHQEAPEAD@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutMainLoop referenced in function "public: __cdecl HelloGL::HelloGL(int,char * * const)" (??0HelloGL@@QEAA@HQEAPEAD@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutPostRedisplay referenced in function "public: void __cdecl HelloGL::Update(void)" (?Update@HelloGL@@QEAAXXZ)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutSwapBuffers referenced in function "public: void __cdecl HelloGL::Display(void)" (?Display@HelloGL@@QEAAXXZ)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutKeyboardFunc referenced in function "public: void __cdecl HelloGL::InitGL(int,char * * const)" (?InitGL@HelloGL@@QEAAXHQEAPEAD@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp_glutDisplayFunc referenced in function "public: void __cdecl HelloGL::InitGL(int,char * * const)" (?InitGL@HelloGL@@QEAAXHQEAPEAD@Z)
-HelloGL.obj : error LNK2019: unresolved external symbol __imp___glutInitWithExit referenced in function glutInit_ATEXIT_HACK
-HelloGL.obj : error LNK2019: unresolved external symbol __imp___glutCreateWindowWithExit referenced in function glutCreateWindow_ATEXIT_HACK
-freeglut.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\jakea\source\repos\OpenGL-FreeGLUT-Project\x64\Debug\HelloGL.exe : fatal error LNK1120: 12 unresolved externals
+﻿  HelloGL.cpp
+C:\Users\a013867o\RiderProjects\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(7,10): error C1083: Cannot open include file: 'freetype/freetype.h': No such file or directory
+  main.cpp
+  TGALoader.cpp
+  Generating Code...

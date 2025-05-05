@@ -43,10 +43,32 @@ bool Texture2D::Load(const char* path, int width, int height)
     //Generate a texture ID, which is used to reference and manipulate the texture throughout the program
     glBindTexture(GL_TEXTURE_2D, _ID); //Bind the texture ID
     //glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);//Create the texture with the given parameters
-    gluBuild2DMipmaps(GL_TEXTURE_2D, 3, width, height, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);
+    gluBuild2DMipmaps(GL_TEXTURE_2D, 3, _width, _height, GL_RGB, GL_UNSIGNED_BYTE, tempTextureData);
     //Build the mipmaps for the texture
     //glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     //glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
+    return true;
+}
+
+bool Texture2D::LoadFreeType(const FT_Bitmap& bitmap)
+{
+    //Use reeType's bitmap data to generate an OpenGL texture
+    _width = bitmap.width;
+    _height = bitmap.rows;
+
+    glGenTextures(1, &_ID);
+    glBindTexture(GL_TEXTURE_2D, _ID);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    //Sets texture wrapping to GL_CLAMP
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+
+    //Generate the texture from the FreeType bitmap buffer
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_ALPHA, _width, _height, 0, GL_ALPHA, GL_UNSIGNED_BYTE, bitmap.buffer);
 
     return true;
 }

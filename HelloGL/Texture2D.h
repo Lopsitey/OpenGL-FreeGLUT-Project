@@ -1,5 +1,7 @@
 #pragma once
 #include "Structures.h"
+#include <ft2build.h>//freetype
+#include FT_FREETYPE_H//a macro to include the other header files
 
 class Texture2D
 {
@@ -8,6 +10,7 @@ public:
     ~Texture2D(void);
 
     bool Load(const char* path, int width, int height);
+    bool LoadFreeType(const FT_Bitmap& bitmap);
 
     GLuint GetID() const { return _ID; }
     int GetWidth() const { return _width; }

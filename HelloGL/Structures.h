@@ -16,12 +16,11 @@ struct Camera
     Vector3 up;
 };
 
-/*
 struct Color
 {
 	GLfloat r, g, b;
 };
-*/
+
 struct Vertex
 {
     GLfloat x, y, z;
@@ -60,4 +59,10 @@ struct Material
     Vector4 diffuse;
     Vector4 specular;
     GLfloat shininess;
+};
+struct Glyph {
+    GLuint textureID;
+    int width, height;
+    int bearingX, bearingY;
+    int advance;
 };
