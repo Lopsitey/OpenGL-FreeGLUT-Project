@@ -7,6 +7,25 @@
 struct Vector3
 {
     float x, y, z;
+
+    Vector3& operator+=(const Vector3& other) //overloaded the operator to allow direct addition with other vectors
+    {
+        x += other.x;
+        y += other.y;
+        z += other.z;
+        return *this;
+    }
+
+    Vector3& operator*=(const float& other) //for multiplication
+    {
+        x *= other;
+        y *= other;
+        z *= other;
+        return *this;
+    }
+
+    Vector3& operator=(const Vector3& other) = default; //allows you to directly set the vector 3
+
 };
 
 struct Camera

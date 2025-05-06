@@ -4,16 +4,20 @@
 #include <cstdlib>//for rand, srand
 #include <ctime>
 #include <iostream>
+#define GLfloat(x) static_cast<GLfloat>(x)//Casts input to a GLfloat
 
+HelloGL* HelloGL::instance = nullptr; //because it's a static variable
 HelloGL::HelloGL(int argc, char* argv[])
 {
-	displayText = "Hello World!";//Text to be displayed on the screen
+	instance = this; //sets the instance for any free functions
+	displayText = "Right Click To Access Menu!"; //Text to be displayed on the screen
 	rotation = 0.0f;
-	GLUTCallbacks::Init(this);
+	GLUTCallbacks::Init(instance);
 	InitGL(argc, argv); //initialises the OpenGL settings
 	InitObjects();
 	InitLighting();
 	InitFonts();
+	InitMenu();
 	glutMainLoop();
 	FT_Done_Face(fontFace);
 	FT_Done_FreeType(fontLib);
@@ -52,19 +56,22 @@ void HelloGL::InitGL(int argc, char* argv[])
 void HelloGL::InitObjects()
 {
 	Mesh* cubeMesh = MeshLoader::Load("cube.txt"); //Load the mesh from the file
-	Mesh* triangleMesh = MeshLoader::Load("pyramid.txt"); //Load the mesh from the file
-	auto textureTGA = new TGALoader();
-	auto texture = new Texture2D();
+	//Mesh* triangleMesh = MeshLoader::Load("pyramid.txt"); //Load the mesh from the file
+	auto textureTGA = new TGALoader(); //TGA loader
+	auto texture = new Texture2D(); //For any 2D textures or RAW images
 	texture->Load("penguins.raw", 512, 512);
 	textureTGA->Load("fern.tga"); //Load the texture from the file
 
-	srand(static_cast<unsigned int>(time(nullptr))); //Only need to seed the numbers once
+	//Only need to seed the numbers once
+	constexpr int seed = 1746533803; //Other good seeds: 1746533825 || 1746533853
+	srand(seed); //Generates random numbers each time: srand(static_cast<unsigned int>(time(nullptr)));
+	//Outputs random seed: std::cout<<"Seed: "<<static_cast<unsigned int>(time(nullptr))<<'\n';
 	for (int i = 0; i < maxObjects; ++i)
 	{
 		//Random x y and z position for each cube
-		float randX = randFloatRange(-20.0f, 19.9f);
-		float randY = randFloatRange(-10.0f, 9.9f);
-		float randZ = -randFloatRange(0.0f, 99.9f);
+		GLfloat randX = randFloatRange(-20.0f, 19.9f);
+		GLfloat randY = randFloatRange(-10.0f, 9.9f);
+		GLfloat randZ = -randFloatRange(0.0f, 99.9f);
 
 		Vector3 randRotAxis = {
 			randFloatRange(1.0f, 10.0f), randFloatRange(1.0f, 10.0f), randFloatRange(1.0f, 10.0f)
@@ -79,6 +86,7 @@ void HelloGL::InitObjects()
 	camera->eye.x = 0.0f;
 	camera->eye.y = 0.0f;
 	camera->eye.z = 1.0f;
+	//ReSharper disable once GrammarMistakeInComment
 	//moves the camera further away than the prior line
 	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
 	camera->center.x = 0.0f;
@@ -117,50 +125,64 @@ void HelloGL::Display() //can be marked const because it doesn't change any valu
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //clears the scene
 
-    for (int i = 0; i < maxObjects; ++i)
-    {
-        objects[i]->Draw();
-    }
+	if (showObjects)
+	{
+		for (int i = 0; i < maxObjects; ++i)
+		{
+			objects[i]->Draw();
+		}
+	}
 
-	glDisable(GL_DEPTH_TEST);//DOES THIS NEED TO BE HERE?
-
-	Vector3 v = { 10.0f, 750.0f, 0.0f };//Top left with a slight gap
-	Color c = { 1.0f, 1.0f, 1.0f };
-	DrawString(displayText, &v, &c);
-
-	glEnable(GL_DEPTH_TEST);
-
+	Color c = {1.0f, 1.0f, 1.0f}; //White
+	DrawString(displayText, &textLoc, &c);
     glFlush();
     glutSwapBuffers();
 }
 
 //Generates a random float in the range [min, max]
-float HelloGL::randFloatRange(float min, float max)
+GLfloat HelloGL::randFloatRange(float min, float max)
 {
-	float num = (max - min) + min;
-	return (static_cast<float>(rand()) / RAND_MAX) * (max - min) + min;
+	return (GLfloat(rand()) / RAND_MAX) * (max - min) + min;
 }
-
 
 void HelloGL::Update()
 {
-    for (int i = 0; i < maxObjects; ++i)
-    {
-        objects[i]->Update();
-    }
-    glLoadIdentity();
-    gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z,
-              camera->up.x, camera->up.y, camera->up.z);
-    glutPostRedisplay();
-    glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->ambient.x));
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->diffuse.x));
-    glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->specular.x));
-    glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPos->x));
+	if (showObjects)
+	{
+		for (int i = 0; i < maxObjects; ++i)
+		{
+			objects[i]->Update();
+		}
+
+		glLoadIdentity();
+		gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z,
+		          camera->up.x, camera->up.y, camera->up.z);
+		glutPostRedisplay();
+		glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->ambient.x));
+		glLightfv(GL_LIGHT0, GL_DIFFUSE, &(_lightData->diffuse.x));
+		glLightfv(GL_LIGHT0, GL_SPECULAR, &(_lightData->specular.x));
+		glLightfv(GL_LIGHT0, GL_POSITION, &(_lightPos->x));
+	}
+	else
+	{
+		glutPostRedisplay(); //keeps the text updating if no objects are shown
+	}
 }
 
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
-	displayText += key;//Add the key pressed to the display text
+	if (initiatedTyping)
+	{
+		if (key == '\b')
+		{
+			if (displayText.length() > 0) //if there is any text to erase
+				displayText.erase(displayText.size() - 1); //removes the last character if backspace is pressed
+		}
+		else
+		{
+			displayText += static_cast<char>(key); //Add the key pressed to the display text
+		}
+	}
 	/*
 	if (key == '+')
 	{
@@ -194,23 +216,23 @@ bool HelloGL::InitFonts()
 	FT_Error error = FT_Init_FreeType(&fontLib);
 	if (error)//where 0 is success
 	{
-		std::cerr << "An error occurred during FreeType library initialization: " << error << std::endl;
+		std::cerr << "An error occurred during FreeType library initialization: " << error << '\n';
 		exit(1);
 	}
-	
-	error = FT_New_Face(fontLib, fontPath, 0, &fontFace);
+	std::string fontPath = "C:/Windows/Fonts/" + fontType + ".ttf"; //sets the font path to the font type
+	error = FT_New_Face(fontLib, fontPath.c_str(), 0, &fontFace); //c_str passes the string in as a constant
 	if (error)
 	{
-		std::cerr << "An error occurred during FreeType face initialization: " << error << std::endl;
+		std::cerr << "An error occurred during FreeType face initialization: " << error << '\n';
 		exit(1);
 	}
 	else if (error)
 	{
-		std::cerr << "An error occurred, the font file could be opened or read, or it is broken... " << error << std::endl;
+		std::cerr << "An error occurred, the font file could be opened or read, or it is broken... " << error << '\n';
 		exit(1);
 	}
-
 	FT_Set_Pixel_Sizes(fontFace, 0, 40);//Sets the font size to 40px
+	return true;
 }
 
 void HelloGL::DrawString(std::string &text, Vector3* pos, Color* color)
@@ -230,14 +252,14 @@ void HelloGL::DrawString(std::string &text, Vector3* pos, Color* color)
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);//Alpha blending
 
 	glColor3f(color->r, color->g, color->b);
-	float startX = pos->x;
-	float startY = pos->y;
+	GLfloat startX = pos->x;
+	GLfloat startY = pos->y;
 
 	for (char c : text)
 	{
 		if (FT_Load_Char(fontFace, c, FT_LOAD_RENDER))
 		{
-			std::cerr << "Could not load character" << std::endl;
+			std::cerr << "Could not load character" << '\n';
 			continue;
 		}
 
@@ -248,11 +270,11 @@ void HelloGL::DrawString(std::string &text, Vector3* pos, Color* color)
 		fontTex.LoadFreeType(glyph->bitmap);//Create the texture for this character using the Texture2D class
 		
 		//Set the position for this character
-		float x = startX + glyph->bitmap_left;
-		float y = startY - (glyph->bitmap.rows - glyph->bitmap_top);//Align to the baseline 
+		GLfloat x = startX + GLfloat(glyph->bitmap_left);
+		GLfloat y = startY - GLfloat((glyph->bitmap.rows - glyph->bitmap_top)); //Align to the baseline 
 		//Get the character width and height
-		float texWidth = glyph->bitmap.width;
-		float texHeight = glyph->bitmap.rows;
+		GLfloat texWidth = GLfloat(glyph->bitmap.width);
+		GLfloat texHeight = GLfloat(glyph->bitmap.rows);
 
 		//Draw the character as a textured quad
 		glBindTexture(GL_TEXTURE_2D, fontTex.GetID());
@@ -266,7 +288,7 @@ void HelloGL::DrawString(std::string &text, Vector3* pos, Color* color)
 		glEnd();
 
 		// Advance the position for the next character
-		startX += glyph->advance.x >> 6;//Advance in pixels (note: FT_Advance is in 1/64th of a pixel)
+		startX += GLfloat(glyph->advance.x >> 6); //Advance in pixels (note: FT_Advance is in 1/64th of a pixel)
 	}
 
 	glDisable(GL_BLEND);
@@ -278,4 +300,111 @@ void HelloGL::DrawString(std::string &text, Vector3* pos, Color* color)
 	glMatrixMode(GL_MODELVIEW);
 	glPopMatrix();
 	glPopAttrib();
+}
+
+void HelloGL::InitMenu()
+{
+	int subMenu = glutCreateMenu(MenuCallback);
+	glutAddMenuEntry("Jokerman", 4); //Add an entry to the submenu
+	glutAddMenuEntry("Colonna MT Regular", 5); //Add an entry to the submenu
+	glutAddMenuEntry("Bauhaus 93 Regular", 6); //Add an entry to the submenu
+
+	glutCreateMenu(MenuCallback); //Main menu
+	//Add menu options:
+	glutAddMenuEntry("Show Objects", 1);
+	glutAddMenuEntry("Hide Objects", 2);
+	glutAddMenuEntry("Move on X Axis", 7);
+	glutAddMenuEntry("Move on Y Axis", 8);
+	glutAddMenuEntry("Move on Z Axis", 9);
+	glutAddMenuEntry("Stop All", 10);
+	glutAddMenuEntry("Toggle Friction", 11);
+	glutAddMenuEntry("Toggle Typing Mode", 3);
+
+	glutAddSubMenu("Font", subMenu);
+
+	glutAttachMenu(GLUT_RIGHT_BUTTON); //Attaches the menu to right mouse button
+}
+
+void HelloGL::MenuCallback(int option)
+{
+	if (instance)
+		instance->Menu(option); //Calls the non-static function
+}
+
+void HelloGL::Menu(int option)
+{
+	menuOption = option; //Ensures that you stay in typing mode when changing the font
+	static Vector3 velocity = {0.0f, 0.0f, 0.0f};
+	float frictionCoefficient = 1.0f;
+	switch (option)
+	{
+	case 1:
+		std::cout << "Showing Objects!" << '\n';
+		showObjects = true;
+		break;
+	case 2:
+		std::cout << "Hiding Objects!" << '\n';
+		showObjects = false;
+		break;
+	case 3:
+		std::cout << "Typing Mode!" << '\n';
+		displayText = "";
+		initiatedTyping = !initiatedTyping;
+		break;
+	case 4:
+		std::cout << "Selected Jokerman Font!" << '\n';
+		fontType = "jokerman";
+		textLoc.x = 120.0f;
+		InitFonts();
+		break;
+	case 5:
+		std::cout << "Selected Colonna MT Regular Font!" << '\n';
+		fontType = "COLONNA";
+		textLoc.x = 160.0f;
+		InitFonts();
+		break;
+	case 6:
+		std::cout << "Selected Bauhaus 93 Regular Font!" << '\n';
+		fontType = "BAUHS93";
+		textLoc.x = 150.0f;
+		InitFonts();
+		break;
+	case 7:
+		std::cout << "Pushing along the X Axis!" << '\n';
+		velocity.x = 0.1f;
+		UpdateVelocity(velocity, 1);
+		break;
+	case 8:
+		std::cout << "Pushing along the Y Axis!" << '\n';
+		velocity.y = 0.1f;
+		UpdateVelocity(velocity, 1);
+		break;
+	case 9:
+		std::cout << "Pushing along the Z Axis!" << '\n';
+		velocity.z = -0.1f;
+		UpdateVelocity(velocity, 1);
+		break;
+	case 10:
+		std::cout << "Stopped All" << '\n';
+
+		UpdateVelocity(velocity, 1);
+		break;
+	case 11:
+		std::cout << "Toggled Friction!" << '\n';
+		frictionCoefficient = frictionCoefficient > 0.99f ? 0.99f : 1.0f; //toggles friction
+		UpdateVelocity(velocity, frictionCoefficient);
+		velocity = Vector3{0, 0, 0}; //Resets the velocity so toggling doesn't use the old velocity
+		break;
+	default:
+		std::cout << "ERROR Unsupported Option!" << '\n';
+		break;
+	}
+}
+
+void HelloGL::UpdateVelocity(const Vector3& velocity, const float& frictionCoefficient)
+{
+	for (int i = 0; i < maxObjects; ++i)
+	{
+		objects[i]->SetVelocity(velocity, frictionCoefficient);
+	}
 }

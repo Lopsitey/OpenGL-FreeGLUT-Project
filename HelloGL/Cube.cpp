@@ -1,22 +1,4 @@
-#include "Cube.h"/*
-Vertex Cube::indexedVertices[] = { 1, 1, 1,  -1, 1, 1,  // v0,v1,
-				-1,-1, 1,   1,-1, 1,   // v2,v3
-				1,-1,-1,   1, 1,-1,    // v4,v5
-				-1, 1,-1,   -1,-1,-1 }; // v6,v7
-
-Color Cube::indexedColors[] = { 1, 1, 1,   1, 1, 0,   // v0,v1,
-				1, 0, 0,   1, 0, 1,   // v2,v3
-				0, 0, 1,   0, 1, 1,   // v4,v5
-				0, 1, 0,   0, 0, 0 }; //v6,v7
-
-GLushort Cube::indices[] = { 0, 1, 2,  2, 3, 0,      // front
-				0, 3, 4,  4, 5, 0,      // right
-				0, 5, 6,  6, 1, 0,      // top
-				1, 6, 7,  7, 2, 1,      // left
-				7, 4, 3,  3, 2, 7,      // bottom
-				4, 7, 6,  6, 5, 4 };    // back
-				*/
-
+#include "Cube.h"
 Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z, Vector3 rotationAxis) : SceneObject(mesh, texture)
 {
 	_mesh = mesh;
@@ -55,7 +37,7 @@ void Cube::Draw()
 
 	//instead of retyping every vertex and colour manually in one big long array we can use an array of colours and an array of vertices
 	//these can then be reused by applying them with the relevant indicies
-	//its like accessing a colour pallete and size chart and then choosing what side to apply what colour and length too
+	//its like accessing a colour pallete and size chart and then choosing what side to apply what colour and length to
 	//the indices in this case are being used to access the colours in a specific order whilst they are applied to the sides in a linear order using the pointer to access them
 	//therefore, if you wanted to change the colour of the third side you would have to change the third value in the indices array to access a different colour
 
@@ -75,6 +57,8 @@ void Cube::Draw()
 void Cube::Update()
 {
 	_rotationSpeed += 0.8f;
+	_velocity *= _frictionCoefficient;
+	_position += _velocity; //adds the vectors directly
 }
 
 void Cube::InitMaterials()
@@ -93,4 +77,10 @@ void Cube::InitMaterials()
 	_material->specular.z = 1.0f;
 	_material->specular.w = 1.0f;
 	_material->shininess = 100.0f;
+}
+
+void Cube::SetVelocity(const Vector3& velocity, const float& frictionCoefficient)
+{
+	_velocity = velocity;
+	_frictionCoefficient = frictionCoefficient;
 }

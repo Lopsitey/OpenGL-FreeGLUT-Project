@@ -15,4 +15,5 @@ public:
 
     virtual void Update(); //only needs to be declared virtual in the base class
     virtual void Draw(); //any derived class can then override it, even children of children
+    virtual void SetVelocity(const Vector3& velocity, const float& frictionCoefficient);
 };
