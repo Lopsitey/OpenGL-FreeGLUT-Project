@@ -7,14 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="Week 6&#10;&#10;Finished lighting and materials. I also added a function which randomly rotates every object in the scene and properly randomizes every object's location.">
-      <changelist_data name="Jake Astles" email="jakeastles13@gmail.com" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_2025_21_03__Changes_.xml" afterDir="false" />
+    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="Bug fix with stop all function">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/HelloGL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/HelloGL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Cube.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Cube.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Cube.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Cube.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" afterDir="false" />
@@ -22,10 +17,6 @@
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Structures.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Structures.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1103,7 +1094,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "C++ Project.HelloGL.executor": "Debug",
+    "C++ Project.HelloGL.executor": "Run",
     "C/C++ Project.HelloGL.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -1147,8 +1138,17 @@
       <workItem from="1746395014177" duration="578000" />
       <workItem from="1746395612383" duration="511000" />
       <workItem from="1746396141704" duration="1697000" />
-      <workItem from="1746533604548" duration="25789000" />
+      <workItem from="1746533604548" duration="26638000" />
     </task>
+    <task id="LOCAL-00001" summary="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in.">
+      <option name="closed" value="true" />
+      <created>1746566594874</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746566594874</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -1185,7 +1185,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Bug Fix" />
     <MESSAGE value="Week 6&#10;&#10;Finished lighting and materials. I also added a function which randomly rotates every object in the scene and properly randomizes every object's location." />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 6&#10;&#10;Finished lighting and materials. I also added a function which randomly rotates every object in the scene and properly randomizes every object's location." />
+    <MESSAGE value="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in. Additionally, you can now type properly using different fonts, can choose if you want to begin typing and can use backspace properly to edit typed text." />
+    <MESSAGE value="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in. Additionally, you can now type properly using different fonts, can choose if you want to begin typing and can use backspace properly to edit typed text." />
+    <MESSAGE value="Bug fix with stop all function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix with stop all function" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

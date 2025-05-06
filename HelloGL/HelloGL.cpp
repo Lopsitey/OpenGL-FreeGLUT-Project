@@ -386,7 +386,7 @@ void HelloGL::Menu(int option)
 		break;
 	case 10:
 		std::cout << "Stopped All" << '\n';
-
+		velocity = Vector3{0, 0, 0};
 		UpdateVelocity(velocity, 1);
 		break;
 	case 11:
