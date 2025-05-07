@@ -3,7 +3,8 @@
 #include "Pyramid.h"
 #include <ft2build.h>//freetype
 #include FT_FREETYPE_H//a macro to include the other header files
-#include <string>
+#include "MeshLoader.h"
+
 #define frameMS 16
 class HelloGL
 {

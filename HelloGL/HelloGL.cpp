@@ -1,6 +1,5 @@
 #include "HelloGL.h"
 #include "GLUTCallbacks.h"//not actually used in the header so can be included in the cpp instead
-#include "MeshLoader.h"
 #include <cstdlib>//for rand, srand
 #include <ctime>
 #include <iostream>
@@ -406,5 +405,6 @@ void HelloGL::UpdateVelocity(const Vector3& velocity, const float& frictionCoeff
 	for (int i = 0; i < maxObjects; ++i)
 	{
 		objects[i]->SetVelocity(velocity, frictionCoefficient);
+		//sets the velocity and the friction coefficient for each object
 	}
 }

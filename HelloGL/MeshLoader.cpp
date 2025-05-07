@@ -1,118 +1,92 @@
 #include "MeshLoader.h"
 #include <fstream>//included in the cpp and not the header since other classes accessing the header don't need it
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
 namespace MeshLoader
 {
-    void LoadVertices(ifstream& inFile, Mesh& mesh);
-    void LoadColors(ifstream& inFile, Mesh& mesh);
-    void LoadIndices(ifstream& inFile, Mesh& mesh);
-    void LoadCoords(ifstream& inFile, Mesh& mesh);
-    void LoadNormals(ifstream& inFile, Mesh& mesh);
-
-    void LoadVertices(ifstream& inFile, Mesh& mesh) //file and mesh references
+    void LoadSubMesh(ifstream& inFile, SubMesh& sub)
     {
-        inFile >> mesh.VertexCount;
-
-        if (mesh.VertexCount > 0)
+        string currentLine; //holds the current line in the file
+        while (getline(inFile, currentLine)) //actively reading the file
         {
-            mesh.Vertices = new Vertex[mesh.VertexCount];
+            istringstream ss(currentLine); //for parsing data in the line
+            string tag;
+            ss >> tag; //extracts the first word in the line
 
-            for (int i = 0; i < mesh.VertexCount; i++)
+            if (tag == "SECTION") //for checking for further submeshes within the main mesh
             {
-                inFile >> mesh.Vertices[i].x;
-                inFile >> mesh.Vertices[i].y;
-                inFile >> mesh.Vertices[i].z;
+                //push back to caller to handle next section
+                inFile.seekg(-(currentLine.length() + 1), ios::cur); //TODO 
+                break;
+            }
+
+            if (tag == "VERTICES")
+            {
+                int count;
+                ss >> count;
+                sub.Vertices.resize(count);
+
+                for (int i = 0; i < count; ++i)
+                    inFile >> sub.Vertices[i].x >> sub.Vertices[i].y >> sub.Vertices[i].z;
+            }
+            else if (tag == "TEXCOORDS")
+            {
+                int count;
+                ss >> count;
+                sub.TexCoords.resize(count);
+
+                for (int i = 0; i < count; ++i)
+                    inFile >> sub.TexCoords[i].u >> sub.TexCoords[i].v;
+            }
+            else if (tag == "NORMALS")
+            {
+                int count;
+                ss >> count;
+                sub.Normals.resize(count);
+
+                for (int i = 0; i < count; ++i)
+                    inFile >> sub.Normals[i].x >> sub.Normals[i].y >> sub.Normals[i].z;
+            }
+            else if (tag == "INDICES")
+            {
+                int count;
+                ss >> count;
+                sub.Indices.resize(count * 3);
+
+                for (int i = 0; i < count * 3; i += 3)
+                    inFile >> sub.Indices[i] >> sub.Indices[i + 1] >> sub.Indices[i + 2];
             }
         }
     }
 
-    /*
-    void LoadColors(ifstream& inFile, Mesh& mesh)
+    Mesh* Load(const char* path)
     {
-        inFile >> mesh.ColorCount;
-        if (mesh.ColorCount > 0)
+        auto mesh = new Mesh(); //set to auto because type is obvious
+        ifstream inFile(path);
+
+        if (!inFile) //error checking
         {
-            mesh.Colors = new Color[mesh.ColorCount];
-            for (int i = 0; i < mesh.ColorCount; ++i)
-            {
-                inFile >> mesh.Colors[i].r;
-                inFile >> mesh.Colors[i].g;
-                inFile >> mesh.Colors[i].b;
-            }
-        }
-    }
-    */
-
-    void LoadIndices(ifstream& inFile, Mesh& mesh)
-    {
-        inFile >> mesh.IndexCount;
-        if (mesh.IndexCount > 0)
-        {
-            mesh.Indices = new GLushort[mesh.IndexCount];
-            for (int i = 0; i < mesh.IndexCount; ++i)
-            {
-                inFile >> mesh.Indices[i];
-            }
-        }
-    }
-
-    void LoadCoords(ifstream& inFile, Mesh& mesh)
-    {
-        inFile >> mesh.TextCoordinateCount;
-        if (mesh.TextCoordinateCount > 0)
-        {
-            mesh.TexCoords = new TextCoordinate[mesh.TextCoordinateCount];
-            for (int i = 0; i < mesh.TextCoordinateCount; ++i)
-            {
-                inFile >> mesh.TexCoords[i].u;
-                inFile >> mesh.TexCoords[i].v;
-            }
-        }
-    }
-
-    void LoadNormals(ifstream& inFile, Mesh& mesh)
-    {
-        inFile >> mesh.NormalCount;
-        if (mesh.NormalCount > 0)
-        {
-            mesh.Normals = new Vector3[mesh.NormalCount];
-            for (int i = 0; i < mesh.NormalCount; ++i)
-            {
-                inFile >> mesh.Normals[i].x;
-                inFile >> mesh.Normals[i].y;
-                inFile >> mesh.Normals[i].z;
-            }
-        }
-    }
-
-    Mesh* MeshLoader::Load(const char* path)
-    {
-        auto mesh = new Mesh();
-
-        ifstream inFile;
-        inFile.open(path);
-
-        if (!inFile.good())
-        {
-            cerr << "Can't open texture file " << path << endl;
+            cerr << "Failed to open file: " << path << '\n'; //couldn't open
+            delete mesh;
             return nullptr;
         }
 
-        LoadVertices(inFile, *mesh);
-        //LoadColors(inFile, *mesh);
-        LoadCoords(inFile, *mesh); //Swapping these lets the pyramids load in because they're untextured at the moment
-        LoadNormals(inFile, *mesh);
-        LoadIndices(inFile, *mesh);
-        //The coords then aren't loaded into the cube so it gets no texture and is rendered empty
-
-
-        cout << path << " LOADED" << endl;
+        string line;
+        while (getline(inFile, line))
+        {
+            if (line.rfind("SECTION", 0) == 0) //for the initial mesh
+            {
+                SubMesh sub;
+                LoadSubMesh(inFile, sub);
+                mesh->SubMeshes.push_back(sub);
+            }
+        }
 
         inFile.close();
-
+        cout << path << " loaded successfully with " << mesh->SubMeshes.size() << " sections.\n";
         return mesh;
     }
 }

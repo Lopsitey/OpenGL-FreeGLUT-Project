@@ -3,6 +3,8 @@
 #include <gl/GL.h>//OpenGL itself
 #include <gl/GLU.h>//OpenGL utilities
 #include "GL/freeglut.h"//freeglut library
+#include <string>
+#include <vector>
 
 struct Vector3
 {
@@ -50,14 +52,17 @@ struct TextCoordinate
     GLfloat u, v;
 };
 
+struct SubMesh
+{
+    std::vector<Vertex> Vertices; //a vector of Vector3s (verticies)
+    std::vector<Vector3> Normals;
+    std::vector<GLushort> Indices;
+    std::vector<TextCoordinate> TexCoords;
+};
+
 struct Mesh
 {
-    Vertex* Vertices;
-    Vector3* Normals;
-    GLushort* Indices;
-    TextCoordinate* TexCoords;
-    int TextCoordinateCount;
-    int VertexCount, NormalCount, IndexCount;
+    std::vector<SubMesh> SubMeshes;
 };
 
 struct Vector4
