@@ -7,9 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HelloGL/earth.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelloGL/shuttle.tga" afterDir="false" />
+    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity.">
+      <change afterPath="$PROJECT_DIR$/HelloGL/Terrain.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/Terrain.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/HelloGL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/HelloGL.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Cube.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Cube.cpp" afterDir="false" />
@@ -18,19 +18,20 @@
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/unsuccessfulbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/MeshLoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/MeshLoader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Pyramid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Pyramid.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/Pyramid.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Pyramid.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/cube.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/cube.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/pyramid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/pyramid.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,8 +149,10 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um/gl/GL.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HelloGL/Cube.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HelloGL/GL/freeglut_std.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HelloGL/HelloGL.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HelloGL/SceneObject.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -219,7 +222,7 @@
       <workItem from="1746649060250" duration="83000" />
       <workItem from="1746649158558" duration="7473000" />
       <workItem from="1746712871584" duration="10813000" />
-      <workItem from="1746723823418" duration="3134000" />
+      <workItem from="1746723823418" duration="7115000" />
     </task>
     <task id="LOCAL-00001" summary="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in.">
       <option name="closed" value="true" />
@@ -245,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746660329206</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity.">
+      <option name="closed" value="true" />
+      <created>1746727232124</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746727232124</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -286,7 +297,8 @@
     <MESSAGE value="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in. Additionally, you can now type properly using different fonts, can choose if you want to begin typing and can use backspace properly to edit typed text." />
     <MESSAGE value="Bug fix with stop all function" />
     <MESSAGE value="Started to add a better mesh loader&#10;&#10;This will be for more complex meshes, when fully implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to add a better mesh loader&#10;&#10;This will be for more complex meshes, when fully implemented" />
+    <MESSAGE value="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

@@ -4,47 +4,11 @@ Pyramid::Pyramid(Mesh* mesh, TGALoader* texture, float x, float y, float z, Vect
 	: SceneObject(mesh, texture, Vector3{x, y, z}, rotationAxis, frictionCoefficient = 0.99f)
 {
 	//0.99f slows the pyramid down over time (more friction than the cube)
-	_rotationSpeed = 0;
 }
 
 Pyramid::~Pyramid(void)
 {
-    delete _mesh; //delete the mesh
-}
-
-void Pyramid::Draw()
-{
-	if (_mesh == nullptr)
-		return;
-
-	glBindTexture(GL_TEXTURE_2D, _texture->GetID());
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_NORMAL_ARRAY);
-	for (const auto& subMesh : _mesh->SubMeshes)
-	{
-		glNormalPointer(GL_FLOAT, 0, subMesh.Normals.data());
-		glVertexPointer(3, GL_FLOAT, 0, subMesh.Vertices.data());
-		glTexCoordPointer(2, GL_FLOAT, 0, subMesh.TexCoords.data());
-	}
-	InitMaterials();
-	glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->ambient.x));
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->diffuse.x));
-	glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->specular.x));
-	glMaterialf(GL_FRONT, GL_SHININESS, _material->shininess);
-
-	glPushMatrix();
-	glTranslatef(_position.x, _position.y, _position.z);
-	glRotatef(_rotationSpeed, _rotationAxis.x, _rotationAxis.y, _rotationAxis.z);
-	for (const auto& subMesh : _mesh->SubMeshes)
-	{
-		glDrawElements(GL_TRIANGLES, subMesh.Indices.size(), GL_UNSIGNED_SHORT, subMesh.Indices.data());
-	}
-	glPopMatrix();
-
-	glDisableClientState(GL_NORMAL_ARRAY);
-	glDisableClientState(GL_VERTEX_ARRAY);
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	
 }
 
 void Pyramid::Update()
