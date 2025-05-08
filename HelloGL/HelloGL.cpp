@@ -55,29 +55,36 @@ void HelloGL::InitGL(int argc, char* argv[])
 void HelloGL::InitObjects()
 {
 	Mesh* cubeMesh = MeshLoader::Load("cube.txt"); //Load the mesh from the file
-	//Mesh* triangleMesh = MeshLoader::Load("pyramid.txt"); //Load the mesh from the file
-	auto textureTGA = new TGALoader(); //TGA loader
+	Mesh* triangleMesh = MeshLoader::Load("pyramid.txt"); //Load the mesh from the file
+	auto cubeTexTGA = new TGALoader(); //TGA loader
+	auto pyramidTexTGA = new TGALoader();
 	auto texture = new Texture2D(); //For any 2D textures or RAW images
 	texture->Load("penguins.raw", 512, 512);
-	textureTGA->Load("fern.tga"); //Load the texture from the file
+	cubeTexTGA->Load("fern.tga"); //Loads the texture from the file
+	pyramidTexTGA->Load("earth.tga");
 
 	//Only need to seed the numbers once
 	constexpr int seed = 1746533803; //Other good seeds: 1746533825 || 1746533853
 	srand(seed); //Generates random numbers each time: srand(static_cast<unsigned int>(time(nullptr)));
 	//Outputs random seed: std::cout<<"Seed: "<<static_cast<unsigned int>(time(nullptr))<<'\n';
+	
 	for (int i = 0; i < maxObjects; ++i)
 	{
-		//Random x y and z position for each cube
+		//Random x, y and z position for each object
 		GLfloat randX = randFloatRange(-20.0f, 19.9f);
 		GLfloat randY = randFloatRange(-10.0f, 9.9f);
 		GLfloat randZ = -randFloatRange(0.0f, 99.9f);
 
 		Vector3 randRotAxis = {
-			randFloatRange(1.0f, 10.0f), randFloatRange(1.0f, 10.0f), randFloatRange(1.0f, 10.0f)
+			randFloatRange(1.0f, 10.0f),
+			randFloatRange(1.0f, 10.0f),
+			randFloatRange(1.0f, 10.0f)
 		}; //Rotation axis
 
-		objects[i] = new Cube(cubeMesh, textureTGA, randX, randY, randZ, randRotAxis);
-		//instantiating a child of the parent class SceneObject
+		if (i < maxObjects - 50) //instantiating a child of the parent class SceneObject
+			objects[i] = new Cube(cubeMesh, cubeTexTGA, randX, randY, randZ, randRotAxis);
+		else
+			objects[i] = new Pyramid(triangleMesh, pyramidTexTGA, randX, randY, randZ, randRotAxis);
 	}
 
 	rotation = 0.0f; //default rotation
@@ -99,17 +106,13 @@ void HelloGL::InitObjects()
 
 void HelloGL::InitLighting()
 {
-	_lightPos = new Vector4();
-	_lightPos->x = 0.0;
-	_lightPos->y = 0.0;
-	_lightPos->z = 1.0;
-	_lightPos->w = 0.0;
+	_lightPos = new Vector4{0, 0, 1, 0}; //Light position
 
 	_lightData = new Lighting();
-	_lightData->ambient.x = 0.2f;
-	_lightData->ambient.y = 0.2f;
-	_lightData->ambient.z = 0.2f;
-	_lightData->ambient.w = 1.0f;
+	_lightData->ambient.x = 0.2f; //red
+	_lightData->ambient.y = 0.2f; //green
+	_lightData->ambient.z = 0.2f; //blue
+	_lightData->ambient.w = 1.0f; //alpha value
 	_lightData->diffuse.x = 0.8f;
 	_lightData->diffuse.y = 0.8f;
 	_lightData->diffuse.z = 0.8f;
@@ -333,8 +336,8 @@ void HelloGL::MenuCallback(int option)
 void HelloGL::Menu(int option)
 {
 	menuOption = option; //Ensures that you stay in typing mode when changing the font
-	static Vector3 velocity = {0.0f, 0.0f, 0.0f};
-	float frictionCoefficient = 1.0f;
+	static Vector3 velocity = {0.0f, 0.0f, 0.0f}; //static ensures that the velocity is not reset each time
+	static bool toggleFriction = false;
 	switch (option)
 	{
 	case 1:
@@ -371,27 +374,27 @@ void HelloGL::Menu(int option)
 	case 7:
 		std::cout << "Pushing along the X Axis!" << '\n';
 		velocity.x = 0.1f;
-		UpdateVelocity(velocity, 1);
+		UpdateVelocity(velocity, toggleFriction);
 		break;
 	case 8:
 		std::cout << "Pushing along the Y Axis!" << '\n';
 		velocity.y = 0.1f;
-		UpdateVelocity(velocity, 1);
+		UpdateVelocity(velocity, toggleFriction);
 		break;
 	case 9:
 		std::cout << "Pushing along the Z Axis!" << '\n';
 		velocity.z = -0.1f;
-		UpdateVelocity(velocity, 1);
+		UpdateVelocity(velocity, toggleFriction);
 		break;
 	case 10:
 		std::cout << "Stopped All" << '\n';
 		velocity = Vector3{0, 0, 0};
-		UpdateVelocity(velocity, 1);
+		UpdateVelocity(velocity, toggleFriction);
 		break;
 	case 11:
-		std::cout << "Toggled Friction!" << '\n';
-		frictionCoefficient = frictionCoefficient > 0.99f ? 0.99f : 1.0f; //toggles friction
-		UpdateVelocity(velocity, frictionCoefficient);
+		std::cout << "Friction is now " << (!toggleFriction == 1 ? "on!" : "off!") << '\n';
+		toggleFriction = !toggleFriction;
+		UpdateVelocity(velocity, toggleFriction);
 		velocity = Vector3{0, 0, 0}; //Resets the velocity so toggling doesn't use the old velocity
 		break;
 	default:
@@ -400,11 +403,11 @@ void HelloGL::Menu(int option)
 	}
 }
 
-void HelloGL::UpdateVelocity(const Vector3& velocity, const float& frictionCoefficient)
+void HelloGL::UpdateVelocity(const Vector3& velocity, const bool& toggleFriction)
 {
 	for (int i = 0; i < maxObjects; ++i)
 	{
-		objects[i]->SetVelocity(velocity, frictionCoefficient);
+		objects[i]->SetVelocity(velocity, toggleFriction ? objects[i]->GetFrictionCoefficient() : 1.0f);
 		//sets the velocity and the friction coefficient for each object
 	}
 }

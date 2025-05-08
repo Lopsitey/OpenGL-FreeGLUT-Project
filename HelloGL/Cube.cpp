@@ -1,14 +1,12 @@
 #include "Cube.h"
-Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z, Vector3 rotationAxis) : SceneObject(mesh, texture)
+
+Cube::Cube(Mesh* mesh, TGALoader* texture, float x, float y, float z, Vector3 rotationAxis)
+	: SceneObject(mesh, texture, Vector3{x, y, z}, rotationAxis, frictionCoefficient = 0.995f)
 {
-	_mesh = mesh;
-	_texture = texture;
+	//0.999f slows the cube down over time (less friction than the pyramid)
 	_rotationSpeed = 0.0f;
-	_rotationAxis = rotationAxis;
-	_position.x = x;
-	_position.y = y;
-	_position.z = z;
 }
+
 
 Cube::~Cube(void)
 {
@@ -25,10 +23,13 @@ void Cube::Draw()
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY); //enables the texture to be drawn
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_NORMAL_ARRAY);
-	glNormalPointer(GL_FLOAT, 0, _mesh->Normals);
-	glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
-	//glColorPointer(3, GL_FLOAT, 0, _mesh->Colors);
-	glTexCoordPointer(2, GL_FLOAT, 0, _mesh->TexCoords); //binds the texture coordinates to the cube
+	for (const auto& subMesh : _mesh->SubMeshes)
+	{
+		//.data() returns a pointer to the first element of the array which is all the function needs to read the entire array
+		glNormalPointer(GL_FLOAT, 0, subMesh.Normals.data());
+		glVertexPointer(3, GL_FLOAT, 0, subMesh.Vertices.data());
+		glTexCoordPointer(2, GL_FLOAT, 0, subMesh.TexCoords.data()); //binds the texture coordinates to the cube
+	}
 	InitMaterials();
 	glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->ambient.x));
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->diffuse.x));
@@ -44,11 +45,14 @@ void Cube::Draw()
 	glPushMatrix();
 	glTranslatef(_position.x, _position.y, _position.z);
 	glRotatef(_rotationSpeed, _rotationAxis.x, _rotationAxis.y, _rotationAxis.z);
-	glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);
-	//draw mode, side count, indices type, indices
-	glPopMatrix();
 
-	//glDisableClientState(GL_COLOR_ARRAY);
+	for (const auto& subMesh : _mesh->SubMeshes)
+	{
+		glDrawElements(GL_TRIANGLES, subMesh.Indices.size(), GL_UNSIGNED_SHORT, subMesh.Indices.data());
+		//draw mode, side count, indices type, indices
+	}
+	glPopMatrix();
+	
 	glDisableClientState(GL_NORMAL_ARRAY);
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY); //disables the texture coordinates
@@ -57,30 +61,15 @@ void Cube::Draw()
 void Cube::Update()
 {
 	_rotationSpeed += 0.8f;
-	_velocity *= _frictionCoefficient;
+	_velocity *= _frictionCoefficient; //applies friction to the velocity
 	_position += _velocity; //adds the vectors directly
 }
 
 void Cube::InitMaterials()
 {
 	_material = new Material();
-	_material->ambient.x = 0.8f;
-	_material->ambient.y = 0.05f;
-	_material->ambient.z = 0.05f;
-	_material->ambient.w = 1.0f;
-	_material->diffuse.x = 0.8f;
-	_material->diffuse.y = 0.05f;
-	_material->diffuse.z = 0.05f;
-	_material->diffuse.w = 1.0f;
-	_material->specular.x = 1.0f;
-	_material->specular.y = 1.0f;
-	_material->specular.z = 1.0f;
-	_material->specular.w = 1.0f;
+	_material->ambient = {0.8f, 0.05f, 0.05f, 1.0f}; //red
+	_material->diffuse = {0.8f, 0.05f, 0.05f, 1.0f}; //red
+	_material->specular = {1.0f, 1.0f, 1.0f, 1.0f}; //bright white - higher value = brighter
 	_material->shininess = 100.0f;
-}
-
-void Cube::SetVelocity(const Vector3& velocity, const float& frictionCoefficient)
-{
-	_velocity = velocity;
-	_frictionCoefficient = frictionCoefficient;
 }

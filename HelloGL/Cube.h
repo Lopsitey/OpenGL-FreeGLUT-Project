@@ -10,12 +10,9 @@ public:
     void Draw() override;
     void Update() override;
     void InitMaterials();
-    void SetVelocity(const Vector3& velocity, const float& frictionCoefficient) override;
+    float GetFrictionCoefficient() const override { return frictionCoefficient; }
 private:
-    Vector3 _position;
     GLfloat _rotationSpeed;
-    Vector3 _rotationAxis;
     Material* _material;
-    Vector3 _velocity;
-    float _frictionCoefficient;
+    float frictionCoefficient;
 };

@@ -27,7 +27,7 @@ public:
     void Menu(int option);
     
 private:
-    static constexpr int maxObjects = 250;
+    static constexpr int maxObjects = 300;
     float rotation;
     Camera* camera;
     SceneObject* objects[maxObjects]; //An array of all the objects to be drawn to the screen
@@ -42,5 +42,5 @@ private:
     int menuOption = 0;
     bool initiatedTyping = false;
     bool showObjects = false;
-    void UpdateVelocity(const Vector3& velocity, const float& frictionCoefficient);
+    void UpdateVelocity(const Vector3& velocity, const bool& toggleFriction);
 };

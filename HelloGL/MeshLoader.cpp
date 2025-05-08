@@ -18,9 +18,10 @@ namespace MeshLoader
 
             if (tag == "SECTION") //for checking for further submeshes within the main mesh
             {
-                //push back to caller to handle next section
-                inFile.seekg(-(currentLine.length() + 1), ios::cur); //TODO 
+                inFile.seekg(-static_cast<std::streamoff>(currentLine.length() + 1), std::ios::cur);
+                //if a new mesh is found, rewind the file to the start of the line
                 break;
+                //returns back to the load function so the function can be called again and a new mesh can be loaded
             }
 
             if (tag == "VERTICES")
