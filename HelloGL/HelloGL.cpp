@@ -57,6 +57,7 @@ void HelloGL::InitObjects()
 	Mesh* cubeMesh = MeshLoader::Load("cube.txt"); //Load the mesh from the file
 	Mesh* triangleMesh = MeshLoader::Load("pyramid.txt");
 	Mesh* terrainMesh = MeshLoader::Load("terrain.txt");
+	Mesh* grenadeMesh = MeshLoader::Load("full_grenade.txt");
 	auto cubeTexTGA = new TGALoader(); //TGA loader
 	auto pyramidTexTGA = new TGALoader();
 	auto texture = new Texture2D(); //For any 2D textures or RAW images
@@ -84,8 +85,11 @@ void HelloGL::InitObjects()
 
 		if (i < maxObjects - 50) //instantiating a child of the parent class SceneObject
 			objects[i] = new Cube(cubeMesh, cubeTexTGA, randX, randY, randZ, randRotAxis);
-		else if (i == maxObjects - 1) //Last object is the terrain
-			objects[i] = new Terrain(terrainMesh, pyramidTexTGA, randX, randY, randZ, randRotAxis);
+		else if (i >= maxObjects - 1) //the last object is the terrain
+			objects[i] = new Terrain(terrainMesh, pyramidTexTGA, 0, -3, -15, randRotAxis);
+			//TODO find texture for floor and allow null
+		else if (i >= maxObjects - 2)
+			objects[i] = new Grenade(grenadeMesh, pyramidTexTGA, randX, randY, randZ, randRotAxis);
 		else
 			objects[i] = new Pyramid(triangleMesh, pyramidTexTGA, randX, randY, randZ, randRotAxis);
 	}

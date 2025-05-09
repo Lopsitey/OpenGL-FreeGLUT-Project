@@ -14,7 +14,7 @@ protected:
     Vector3 _velocity{0.0f, 0.0f, 0.0f};
     float _frictionCoefficient{0.99f}; //default friction coefficient where 1 is no friction
     GLfloat _rotationSpeed = 0.0f;
-
+    Vector3 _scale{1, 1, 1}; //default scale
 public:
     SceneObject(Mesh* mesh, TGALoader* texture, Vector3 position, Vector3 rotationAxis, float frictionCoefficient);
     virtual ~SceneObject(void);
@@ -27,9 +27,10 @@ public:
     virtual void InitMaterials() 
     {
         //Default material initialization
+        _material = new Material();
         _material->ambient = { 0.8f, 0.8f, 0.8f, 1.0f };
         _material->diffuse = { 0.8f, 0.8f, 0.8f, 1.0f };
         _material->specular = { 0.2f, 0.2f, 0.2f, 1.0f };
         _material->shininess = 32.0f;
-    };
+    }
 };

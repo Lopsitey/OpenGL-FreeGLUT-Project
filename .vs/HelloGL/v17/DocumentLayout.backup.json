@@ -1,78 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\",
+  "WorkspaceRootPath": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\SceneObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\SceneObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\TGALoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\TGALoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\MeshLoader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\MeshLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\GLUTCallbacks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\HelloGL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\GLUTCallbacks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Structures.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{04EAE77C-641C-4947-914D-1AD2FEC20656}|HelloGL\\HelloGL.vcxproj|solutionrelative:HelloGL\\Texture2D.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,220 +50,88 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TGALoader.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\TGALoader.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.cpp",
-              "RelativeToolTip": "HelloGL\\TGALoader.cpp",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAEUAAAB1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-10T16:06:05.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Texture2D.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h",
-              "RelativeDocumentMoniker": "HelloGL\\Texture2D.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h",
-              "RelativeToolTip": "HelloGL\\Texture2D.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T16:56:28.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Texture2D.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\Texture2D.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp",
-              "RelativeToolTip": "HelloGL\\Texture2D.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T17:08:16.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SceneObject.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h",
-              "RelativeDocumentMoniker": "HelloGL\\SceneObject.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h",
-              "RelativeToolTip": "HelloGL\\SceneObject.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T14:15:09.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SceneObject.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\SceneObject.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.cpp",
-              "RelativeToolTip": "HelloGL\\SceneObject.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T14:15:14.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Pyramid.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.h",
-              "RelativeDocumentMoniker": "HelloGL\\Pyramid.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.h",
-              "RelativeToolTip": "HelloGL\\Pyramid.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T14:42:05.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Pyramid.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\Pyramid.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Pyramid.cpp",
-              "RelativeToolTip": "HelloGL\\Pyramid.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-08T14:42:21.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cube.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.h",
-              "RelativeDocumentMoniker": "HelloGL\\Cube.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.h",
-              "RelativeToolTip": "HelloGL\\Cube.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-08T15:54:39.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Cube.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\Cube.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp",
-              "RelativeToolTip": "HelloGL\\Cube.cpp",
-              "ViewState": "AQIAAAEAAAAAAAAAAIAwwBIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-27T19:47:47.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MeshLoader.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.h",
-              "RelativeDocumentMoniker": "HelloGL\\MeshLoader.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.h",
-              "RelativeToolTip": "HelloGL\\MeshLoader.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-03T15:17:47.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MeshLoader.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\MeshLoader.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\MeshLoader.cpp",
-              "RelativeToolTip": "HelloGL\\MeshLoader.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAwDIAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-03T15:17:53.227Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HelloGL.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp",
-              "RelativeToolTip": "HelloGL\\HelloGL.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFMAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T15:59:15.607Z",
+              "Title": "SceneObject.h",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h",
+              "RelativeDocumentMoniker": "HelloGL\\SceneObject.h",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\SceneObject.h",
+              "RelativeToolTip": "HelloGL\\SceneObject.h",
+              "ViewState": "AgIAAAEAAAAAAAAAAAA3wCIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-08T23:10:34.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TGALoader.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.h",
-              "RelativeDocumentMoniker": "HelloGL\\TGALoader.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\TGALoader.h",
-              "RelativeToolTip": "HelloGL\\TGALoader.h",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-10T16:04:34.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "Structures.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
               "RelativeDocumentMoniker": "HelloGL\\Structures.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Structures.h",
               "RelativeToolTip": "HelloGL\\Structures.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAACAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-27T19:41:58.264Z"
+              "WhenOpened": "2025-05-05T01:10:12.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
+              "Title": "Texture2D.cpp",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp",
+              "RelativeDocumentMoniker": "HelloGL\\Texture2D.cpp",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.cpp",
+              "RelativeToolTip": "HelloGL\\Texture2D.cpp",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAiwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-05T00:21:56.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Texture2D.h",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h",
+              "RelativeDocumentMoniker": "HelloGL\\Texture2D.h",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Texture2D.h",
+              "RelativeToolTip": "HelloGL\\Texture2D.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-05T00:25:22.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cube.cpp",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp",
+              "RelativeDocumentMoniker": "HelloGL\\Cube.cpp",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\Cube.cpp",
+              "RelativeToolTip": "HelloGL\\Cube.cpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-04T23:44:49.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HelloGL.cpp",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp",
+              "RelativeDocumentMoniker": "HelloGL\\HelloGL.cpp",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.cpp",
+              "RelativeToolTip": "HelloGL\\HelloGL.cpp",
+              "ViewState": "AgIAADwAAAAAAAAAAAAwwEUAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-06T15:59:15.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HelloGL.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
+              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
               "RelativeDocumentMoniker": "HelloGL\\HelloGL.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
+              "ToolTip": "C:\\Users\\jakea\\source\\repos\\Lopsitey\\Module-3\\OpenGL-FreeGLUT-Project\\HelloGL\\HelloGL.h",
               "RelativeToolTip": "HelloGL\\HelloGL.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T15:44:14.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GLUTCallbacks.h",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.h",
-              "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.h",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.h",
-              "RelativeToolTip": "HelloGL\\GLUTCallbacks.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-06T16:20:44.71Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GLUTCallbacks.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\GLUTCallbacks.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\GLUTCallbacks.cpp",
-              "RelativeToolTip": "HelloGL\\GLUTCallbacks.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T16:32:23.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\main.cpp",
-              "RelativeDocumentMoniker": "HelloGL\\main.cpp",
-              "ToolTip": "C:\\Users\\jakea\\source\\repos\\OpenGL-FreeGLUT-Project\\HelloGL\\main.cpp",
-              "RelativeToolTip": "HelloGL\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-06T15:49:30.145Z"
+              "WhenOpened": "2025-05-04T23:03:04.874Z"
             }
           ]
         }

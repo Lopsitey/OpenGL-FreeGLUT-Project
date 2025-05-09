@@ -1,8 +1,12 @@
-﻿  GLUTCallbacks.cpp
+﻿  Cube.cpp
+  GLUTCallbacks.cpp
   HelloGL.cpp
-C:\Users\a013867o\RiderProjects\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(254,18): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
-C:\Users\a013867o\RiderProjects\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(255,19): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
   main.cpp
+  MeshLoader.cpp
+  Pyramid.cpp
+  SceneObject.cpp
+  Terrain.cpp
+  Texture2D.cpp
+  TGALoader.cpp
   Generating Code...
-C:\Users\a013867o\RiderProjects\OpenGL-FreeGLUT-Project\HelloGL\HelloGL.cpp(214,1): warning C4715: 'HelloGL::InitFonts': not all control paths return a value
-  HelloGL.vcxproj -> C:\Users\a013867o\RiderProjects\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe
+  HelloGL.vcxproj -> C:\Users\jakea\source\repos\Lopsitey\Module-3\OpenGL-FreeGLUT-Project\Debug\HelloGL.exe

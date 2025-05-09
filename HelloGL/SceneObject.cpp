@@ -45,7 +45,7 @@ void SceneObject::Draw()
 		glVertexPointer(3, GL_FLOAT, 0, subMesh.Vertices.data());
 		glTexCoordPointer(2, GL_FLOAT, 0, subMesh.TexCoords.data()); //binds the texture coordinates to the cube
 	}
-	InitMaterials(); //polyymorphism - calls the derived class InitMaterials function
+	InitMaterials(); //polymorphism - calls the derived class's InitMaterials function
 	glMaterialfv(GL_FRONT, GL_AMBIENT, &(_material->ambient.x));
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, &(_material->diffuse.x));
 	glMaterialfv(GL_FRONT, GL_SPECULAR, &(_material->specular.x));
@@ -58,9 +58,10 @@ void SceneObject::Draw()
 	//therefore, if you wanted to change the colour of the third side you would have to change the third value in the indices array to access a different colour
 
 	glPushMatrix();
-	glTranslatef(_position.x, _position.y, _position.z);
-	glRotatef(_rotationSpeed, _rotationAxis.x, _rotationAxis.y, _rotationAxis.z);
-
+	glTranslatef(_position.x, _position.y, _position.z); //for moving the object
+	glRotatef(_rotationSpeed, _rotationAxis.x, _rotationAxis.y, _rotationAxis.z); //for rotating the object
+	glScalef(_scale.x, _scale.y, _scale.z); //for scaling the object
+	
 	for (const auto& subMesh : _mesh->SubMeshes)
 	{
 		glDrawElements(GL_TRIANGLES, subMesh.Indices.size(), GL_UNSIGNED_SHORT, subMesh.Indices.data());
