@@ -7,52 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity.">
-      <change afterPath="$PROJECT_DIR$/HelloGL/Grenade.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelloGL/Grenade.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/CopilotIndices/17.13.444.19527/CodeChunks.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HelloGL/CopilotIndices/17.13.444.19527/CodeChunks.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/CopilotIndices/17.13.444.19527/SemanticSymbols.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HelloGL/CopilotIndices/17.13.444.19527/SemanticSymbols.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/79c0ecea-87b7-4334-81cc-07d5486b4f63.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/938e2367-4e9f-46ea-aadd-077424a359b6.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/a60d123b-06d8-4ffe-84dd-bb44f5f6405c.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/f929e8ae-22dd-430a-8536-4500b058727d.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HelloGL/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HelloGL/v17/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HelloGL/v17/DocumentLayout.backup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/HelloGL/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HelloGL/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OpenGL-FreeGLUT-Project/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/OpenGL-FreeGLUT-Project/v17/.wsuo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OpenGL-FreeGLUT-Project/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/OpenGL-FreeGLUT-Project/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/HelloGL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/HelloGL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.Build.CppClean.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.exe.recipe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.log" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/HelloGL.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/HelloGL.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/hellogl.obj.enc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/SceneObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/SceneObject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Terrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Terrain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/Terrain.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Terrain.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/cube.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/cube.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/pyramid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/pyramid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloGL/terrain.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/terrain.txt" afterDir="false" />
+    <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/31fa18a4-be5a-4766-9b71-bacbe5068287.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/39fbd58c-1488-472b-b8b0-b9ddf89a30f6.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/7db811c9-fa35-47f9-ac8c-e6b1b86cac96.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/full_grenade.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/patched_grenade.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +114,7 @@
       <workItem from="1746733117188" duration="553000" />
       <workItem from="1746734479897" duration="81000" />
       <workItem from="1746734723402" duration="8998000" />
-      <workItem from="1746800235774" duration="5118000" />
+      <workItem from="1746800235774" duration="5199000" />
     </task>
     <task id="LOCAL-00001" summary="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in.">
       <option name="closed" value="true" />
@@ -188,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746727232124</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Improved everything, overall">
+      <option name="closed" value="true" />
+      <created>1746813057514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746813057514</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -240,7 +208,8 @@
     <MESSAGE value="Bug fix with stop all function" />
     <MESSAGE value="Started to add a better mesh loader&#10;&#10;This will be for more complex meshes, when fully implemented" />
     <MESSAGE value="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity." />
+    <MESSAGE value="Improved everything, overall" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved everything, overall" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

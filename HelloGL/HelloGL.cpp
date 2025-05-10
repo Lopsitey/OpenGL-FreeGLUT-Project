@@ -57,13 +57,15 @@ void HelloGL::InitObjects()
 	Mesh* cubeMesh = MeshLoader::Load("cube.txt"); //Load the mesh from the file
 	Mesh* triangleMesh = MeshLoader::Load("pyramid.txt");
 	Mesh* terrainMesh = MeshLoader::Load("terrain.txt");
-	Mesh* grenadeMesh = MeshLoader::Load("full_grenade.txt");
+	Mesh* sphereMesh = MeshLoader::Load("sphere.txt");
 	auto cubeTexTGA = new TGALoader(); //TGA loader
-	auto pyramidTexTGA = new TGALoader();
+	auto earthTexTGA = new TGALoader();
+	auto grassTexTGA = new TGALoader();
 	auto texture = new Texture2D(); //For any 2D textures or RAW images
 	texture->Load("penguins.raw", 512, 512);
 	cubeTexTGA->Load("fern.tga"); //Loads the texture from the file
-	pyramidTexTGA->Load("earth.tga");
+	earthTexTGA->Load("earth.tga");
+	grassTexTGA->Load("grass.tga");
 
 	//Only need to seed the numbers once
 	constexpr int seed = 1746533803; //Other good seeds: 1746533825 || 1746533853
@@ -86,12 +88,12 @@ void HelloGL::InitObjects()
 		if (i < maxObjects - 50) //instantiating a child of the parent class SceneObject
 			objects[i] = new Cube(cubeMesh, cubeTexTGA, randX, randY, randZ, randRotAxis);
 		else if (i >= maxObjects - 1) //the last object is the terrain
-			objects[i] = new Terrain(terrainMesh, pyramidTexTGA, 0, -3, -15, randRotAxis);
+			objects[i] = new Terrain(terrainMesh, grassTexTGA, 0, -3, -15, randRotAxis);
 			//TODO find texture for floor and allow null
 		else if (i >= maxObjects - 2)
-			objects[i] = new Grenade(grenadeMesh, pyramidTexTGA, randX, randY, randZ, randRotAxis);
+			objects[i] = new Sphere(sphereMesh, earthTexTGA, 0, 1, -30, randRotAxis);
 		else
-			objects[i] = new Pyramid(triangleMesh, pyramidTexTGA, randX, randY, randZ, randRotAxis);
+			objects[i] = new Pyramid(triangleMesh, earthTexTGA, randX, randY, randZ, randRotAxis);
 	}
 
 	rotation = 0.0f; //default rotation

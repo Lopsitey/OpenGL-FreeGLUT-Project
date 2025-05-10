@@ -2,7 +2,7 @@
 #include "Cube.h"
 #include "Pyramid.h"
 #include "Terrain.h"
-#include "Grenade.h"
+#include "Sphere.h"
 #include <ft2build.h>//freetype
 #include FT_FREETYPE_H//a macro to include the other header files
 #include "MeshLoader.h"
