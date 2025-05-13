@@ -3,14 +3,13 @@
 #include <cstdlib>//for rand, srand
 #include <ctime>
 #include <iostream>
+
 #define GLfloat(x) static_cast<GLfloat>(x)//Casts input to a GLfloat
 
 HelloGL* HelloGL::instance = nullptr; //because it's a static variable
 HelloGL::HelloGL(int argc, char* argv[])
 {
 	instance = this; //sets the instance for any free functions
-	displayText = "Right Click To Access Menu!"; //Text to be displayed on the screen
-	rotation = 0.0f;
 	GLUTCallbacks::Init(instance);
 	InitGL(argc, argv); //initialises the OpenGL settings
 	InitObjects();
@@ -25,7 +24,8 @@ HelloGL::HelloGL(int argc, char* argv[])
 HelloGL::~HelloGL(void)
 {
 	delete camera; //Clean up the dynamically allocated Camera object
-	delete*objects; //for deleting an array
+	objects->DeleteList(&head); //Delete the linked list of objects
+	//delete*objects;//for deleting an array
 }
 
 void HelloGL::InitGL(int argc, char* argv[])
@@ -66,17 +66,18 @@ void HelloGL::InitObjects()
 	cubeTexTGA->Load("fern.tga"); //Loads the texture from the file
 	earthTexTGA->Load("earth.tga");
 	grassTexTGA->Load("grass.tga");
-
+	
 	//Only need to seed the numbers once
-	constexpr int seed = 1746533803; //Other good seeds: 1746533825 || 1746533853
+	constexpr int seed = 1746533853; //Other good seeds: 1746533825 || 1746533853 ~~ 1746533853
 	srand(seed); //Generates random numbers each time: srand(static_cast<unsigned int>(time(nullptr)));
 	//Outputs random seed: std::cout<<"Seed: "<<static_cast<unsigned int>(time(nullptr))<<'\n';
-	
+
+	SceneObject* newObj = nullptr;
 	for (int i = 0; i < maxObjects; ++i)
 	{
 		//Random x, y and z position for each object
 		GLfloat randX = randFloatRange(-20.0f, 19.9f);
-		GLfloat randY = randFloatRange(-10.0f, 9.9f);
+		GLfloat randY = randFloatRange(-1.0f, 9.9f);
 		GLfloat randZ = -randFloatRange(0.0f, 99.9f);
 
 		Vector3 randRotAxis = {
@@ -84,33 +85,33 @@ void HelloGL::InitObjects()
 			randFloatRange(1.0f, 10.0f),
 			randFloatRange(1.0f, 10.0f)
 		}; //Rotation axis
-
+		
 		if (i < maxObjects - 50) //instantiating a child of the parent class SceneObject
-			objects[i] = new Cube(cubeMesh, cubeTexTGA, randX, randY, randZ, randRotAxis);
+			newObj = new Cube(cubeMesh, cubeTexTGA, randX, randY, randZ, randRotAxis);
 		else if (i >= maxObjects - 1) //the last object is the terrain
-			objects[i] = new Terrain(terrainMesh, grassTexTGA, 0, -3, -15, randRotAxis);
-			//TODO find texture for floor and allow null
+			newObj = new Terrain(terrainMesh, grassTexTGA, 0, -5, -15, randRotAxis);
 		else if (i >= maxObjects - 2)
-			objects[i] = new Sphere(sphereMesh, earthTexTGA, 0, 1, -30, randRotAxis);
+			newObj = new Sphere(sphereMesh, earthTexTGA, 0, 1, -25, randRotAxis);
 		else
-			objects[i] = new Pyramid(triangleMesh, earthTexTGA, randX, randY, randZ, randRotAxis);
-	}
+			newObj = new Pyramid(triangleMesh, earthTexTGA, randX, randY, randZ, randRotAxis);
 
-	rotation = 0.0f; //default rotation
-	camera = new Camera(); //Deleted in the destructor
-	camera->eye.x = 0.0f;
+		objects->MakeNode(&head, newObj); //makes a new node and adds it to the linked list
+	}
+	objects->PrintList(head); //Not passed as a reference because a pointer is expected
+
+	camera = new Camera(); //Deleted in the destructor because new is used
+
+	camera->eye.x = 0.0f; //position of the camera - works a bit like zoom
 	camera->eye.y = 0.0f;
 	camera->eye.z = 1.0f;
-	//ReSharper disable once GrammarMistakeInComment
-	//moves the camera further away than the prior line
-	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;//the position of the camera in the world
-	camera->center.x = 0.0f;
+
+	camera->center.x = 0.0f; //where it's looking
 	camera->center.y = 0.0f;
-	camera->center.z = 0.0f; //the point the camera is focussed on 
-	camera->up.x = 0.0f;
+	camera->center.z = 0.0f;
+
+	camera->up.x = 0.0f; //up direction
 	camera->up.y = 1.0f;
 	camera->up.z = 0.0f;
-	//camera->eye.x = 5.0f; camera->eye.y = 5.0f; camera->eye.z = -5.0f;
 }
 
 void HelloGL::InitLighting()
@@ -138,12 +139,14 @@ void HelloGL::Display() //can be marked const because it doesn't change any valu
 
 	if (showObjects)
 	{
-		for (int i = 0; i < maxObjects; ++i)
+		LinkedLists::ListNode* current = head; //the head (start) of the linked list
+		while (current != nullptr)
 		{
-			objects[i]->Draw();
+			current->data->Draw(); //Draws each object in the linked list
+			current = current->next;
 		}
 	}
-
+	
 	Color c = {1.0f, 1.0f, 1.0f}; //White
 	DrawString(displayText, &textLoc, &c);
     glFlush();
@@ -160,9 +163,11 @@ void HelloGL::Update()
 {
 	if (showObjects)
 	{
-		for (int i = 0; i < maxObjects; ++i)
+		LinkedLists::ListNode* current = head;
+		while (current != nullptr)
 		{
-			objects[i]->Update();
+			current->data->Update();
+			current = current->next;
 		}
 
 		glLoadIdentity();
@@ -194,32 +199,10 @@ void HelloGL::Keyboard(unsigned char key, int x, int y)
 			displayText += static_cast<char>(key); //Add the key pressed to the display text
 		}
 	}
-	/*
-	if (key == '+')
+	else
 	{
-		rotation += 0.5f;
-		//camera->center.x += 0.1f; - pans the camera right
-		//camera->center.y += 0.1f; - pans the camera up
-		//camera->up.x -= 0.1f;
+		MoveCamera(key, moveSpeed); //Moves the camera if not in typing mode
 	}
-	if (key == '-')
-	{
-		rotation -= 0.5f;
-		//camera->center.x -= 0.1f; - pans the camera left
-		//camera->center.y -= 0.1f; - pans the camera down
-		//camera->up.x += 0.1f;
-	}
-	*/
-	if (key == '+')
-	{
-		camera->eye.z += 0.1f;
-	}
-	if (key == '-')
-	{
-		camera->eye.z -= 0.1f;
-	}
-	/*if (rotation >= 360.0f)
-	    rotation = 0.0f;*/
 }
 
 bool HelloGL::InitFonts()
@@ -330,6 +313,7 @@ void HelloGL::InitMenu()
 	glutAddMenuEntry("Stop All", 10);
 	glutAddMenuEntry("Toggle Friction", 11);
 	glutAddMenuEntry("Toggle Typing Mode", 3);
+	glutAddMenuEntry("Camera Controls", 12);
 
 	glutAddSubMenu("Font", subMenu);
 
@@ -406,6 +390,10 @@ void HelloGL::Menu(int option)
 		UpdateVelocity(velocity, toggleFriction);
 		velocity = Vector3{0, 0, 0}; //Resets the velocity so toggling doesn't use the old velocity
 		break;
+	case 12:
+		std::cout << "Displaying Camera Controls!" << '\n';
+		displayText = "WASDQE to move the camera";
+		break;
 	default:
 		std::cout << "ERROR Unsupported Option!" << '\n';
 		break;
@@ -414,9 +402,103 @@ void HelloGL::Menu(int option)
 
 void HelloGL::UpdateVelocity(const Vector3& velocity, const bool& toggleFriction)
 {
-	for (int i = 0; i < maxObjects; ++i)
+	LinkedLists::ListNode* current = head;
+	while (current != nullptr)
 	{
-		objects[i]->SetVelocity(velocity, toggleFriction ? objects[i]->GetFrictionCoefficient() : 1.0f);
+		current->data->SetVelocity(velocity, toggleFriction ? current->data->GetFrictionCoefficient() : 1.0f);
+		current = current->next;
 		//sets the velocity and the friction coefficient for each object
 	}
 }
+
+void HelloGL::MoveCamera(unsigned char key, float speed)
+{
+	//The initial direction the camera is facing and what all movement is based on
+	Vector3 forward =
+	{
+		camera->center.x - camera->eye.x,
+		camera->center.y - camera->eye.y,
+		camera->center.z - camera->eye.z
+	};
+
+	forward = Normalize(forward); //Normalize to get the forward direction
+
+	Vector3 up = camera->up;
+	Vector3 right = {
+		forward.y * up.z - forward.z * up.y,
+		forward.z * up.x - forward.x * up.z,
+		forward.x * up.y - forward.y * up.x
+	};
+
+	right = Normalize(right); //Perpendicular to forward and up
+
+	//Applies movement using the speed
+	if (key == 'w')
+	{
+		camera->eye.x += forward.x * speed;
+		camera->eye.y += forward.y * speed;
+		camera->eye.z += forward.z * speed;
+		camera->center.x += forward.x * speed;
+		camera->center.y += forward.y * speed;
+		camera->center.z += forward.z * speed;
+	}
+	if (key == 's')
+	{
+		camera->eye.x -= forward.x * speed;
+		camera->eye.y -= forward.y * speed;
+		camera->eye.z -= forward.z * speed;
+		camera->center.x -= forward.x * speed;
+		camera->center.y -= forward.y * speed;
+		camera->center.z -= forward.z * speed;
+	}
+	if (key == 'a')
+	{
+		camera->eye.x -= right.x * speed;
+		camera->eye.y -= right.y * speed;
+		camera->eye.z -= right.z * speed;
+		camera->center.x -= right.x * speed;
+		camera->center.y -= right.y * speed;
+		camera->center.z -= right.z * speed;
+	}
+	if (key == 'd')
+	{
+		camera->eye.x += right.x * speed;
+		camera->eye.y += right.y * speed;
+		camera->eye.z += right.z * speed;
+		camera->center.x += right.x * speed;
+		camera->center.y += right.y * speed;
+		camera->center.z += right.z * speed;
+	}
+	if (key == 'q')
+	{
+		camera->eye.x += up.x * speed;
+		camera->eye.y += up.y * speed;
+		camera->eye.z += up.z * speed;
+		camera->center.x += up.x * speed;
+		camera->center.y += up.y * speed;
+		camera->center.z += up.z * speed;
+	}
+	if (key == 'e')
+	{
+		camera->eye.x -= up.x * speed;
+		camera->eye.y -= up.y * speed;
+		camera->eye.z -= up.z * speed;
+		camera->center.x -= up.x * speed;
+		camera->center.y -= up.y * speed;
+		camera->center.z -= up.z * speed;
+	}
+}
+
+//Normalizing just sets the length to 1. Then the direction can be checked by checking which axis is equal to 1
+Vector3 HelloGL::Normalize(const Vector3& v)
+{
+	//Euclidean norm
+	float len = sqrt(v.x * v.x + v.y * v.y + v.z * v.z);
+	if (len == 0.0f) return {0, 0, 0}; //avoids the divide-by-zero error
+	return {v.x / len, v.y / len, v.z / len};
+}
+
+//If the direction is larger than 1 it is a magnitude and is relevant to the speed of the camera
+//If the direction is diagonal or something it may come out to 0.707 or whatever
+//1 means a pure direction so going (1,1,0) would be like going straight right and up diagonally (at a perfect angle)
+//(1,1,0) normalized would be (0.707, 0.707, 0)

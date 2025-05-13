@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="Cube.h" />
     <ClInclude Include="GLUTCallbacks.h" />
+      <ClInclude Include="LinkedLists.h"/>
       <ClInclude Include="Sphere.h"/>
     <ClInclude Include="HelloGL.h" />
     <ClInclude Include="MeshLoader.h" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="GLUTCallbacks.cpp" />
+      <ClCompile Include="LinkedLists.cpp"/>
       <ClCompile Include="Sphere.cpp"/>
     <ClCompile Include="HelloGL.cpp" />
     <ClCompile Include="main.cpp" />

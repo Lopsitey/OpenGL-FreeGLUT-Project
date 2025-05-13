@@ -8,11 +8,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="246bcd49-10f8-45b6-958a-38fb3bad8ff1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/31fa18a4-be5a-4766-9b71-bacbe5068287.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/39fbd58c-1488-472b-b8b0-b9ddf89a30f6.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/HelloGL/FileContentIndex/7db811c9-fa35-47f9-ac8c-e6b1b86cac96.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelloGL/full_grenade.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelloGL/patched_grenade.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/LinkedLists.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/LinkedLists.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloGL/grass.tga" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HelloGL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.run/HelloGL.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.run/HelloGL.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/HelloGL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/HelloGL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/HelloGL.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/HelloGL.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/HelloGL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/HelloGL.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Release/HelloGL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Release/HelloGL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Release/HelloGL.tlog/HelloGL.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Release/HelloGL.tlog/HelloGL.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Release/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Release/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Sphere.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Sphere.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Structures.h" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Structures.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/TGALoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/TGALoader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/Terrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/Terrain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/full_grenade.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloGL/terrain.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelloGL/terrain.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +68,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/HelloGL/Cube.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HelloGL/Cube.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HelloGL/GL/freeglut_std.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HelloGL/HelloGL.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HelloGL/SceneObject.h" root0="FORCE_HIGHLIGHTING" />
@@ -64,27 +90,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "C++ Project.HelloGL.executor": "Run",
-    "C/C++ Project.HelloGL.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.CMake",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;C++ Project.HelloGL.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ Project.HelloGL.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.CMake&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -115,6 +141,13 @@
       <workItem from="1746734479897" duration="81000" />
       <workItem from="1746734723402" duration="8998000" />
       <workItem from="1746800235774" duration="5199000" />
+      <workItem from="1746918102956" duration="1301000" />
+      <workItem from="1746992883743" duration="5764000" />
+      <workItem from="1747049402788" duration="4685000" />
+      <workItem from="1747085743885" duration="430000" />
+      <workItem from="1747086399718" duration="848000" />
+      <workItem from="1747087509194" duration="1576000" />
+      <workItem from="1747089471625" duration="12567000" />
     </task>
     <task id="LOCAL-00001" summary="Finished Fonts and Menus&#10;&#10;Menus now work fine and the fonts change with the dropdown. The friction can also be toggled, along with the direction the objects are moving in.">
       <option name="closed" value="true" />
@@ -156,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746813057514</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Almost finished now&#10;&#10;Just need to add collision/linked lists and fix the terrain texture.">
+      <option name="closed" value="true" />
+      <created>1746919386781</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746919386781</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -209,7 +250,8 @@
     <MESSAGE value="Started to add a better mesh loader&#10;&#10;This will be for more complex meshes, when fully implemented" />
     <MESSAGE value="Improved inheritance and file loading&#10;&#10;You can now load more complex objects and different types of objects with different textures/materials. Additionally, the SceneObject class has been optimised and now contains better member initialisation and a new overridable function - SetVelocity." />
     <MESSAGE value="Improved everything, overall" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved everything, overall" />
+    <MESSAGE value="Almost finished now&#10;&#10;Just need to add collision/linked lists and fix the terrain texture." />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost finished now&#10;&#10;Just need to add collision/linked lists and fix the terrain texture." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

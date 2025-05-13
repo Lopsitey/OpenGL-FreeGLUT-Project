@@ -6,6 +6,7 @@
 #include <ft2build.h>//freetype
 #include FT_FREETYPE_H//a macro to include the other header files
 #include "MeshLoader.h"
+#include "LinkedLists.h"
 
 #define frameMS 16
 class HelloGL
@@ -30,19 +31,22 @@ public:
     
 private:
     static constexpr int maxObjects = 300;
-    float rotation;
     Camera* camera;
-    SceneObject* objects[maxObjects]; //An array of all the objects to be drawn to the screen
+    LinkedLists* objects = new LinkedLists(); //a linked list of all the objects to be drawn to the screen
+    LinkedLists::ListNode* head = nullptr; //the head of the linked list
     static GLfloat randFloatRange(float min, float max);
     Vector4* _lightPos;
     Lighting* _lightData;
     FT_Library fontLib;//font library initialisation
     FT_Face fontFace;//font face initialisation
-    std::string displayText;
+    std::string displayText = "Right Click To Access Menu!"; //Text to be displayed on the screen
     std::string fontType = "jokerman";
     Vector3 textLoc = {120.0f, 500.0f, 0.0f}; //Centered by default
     int menuOption = 0;
     bool initiatedTyping = false;
     bool showObjects = false;
     void UpdateVelocity(const Vector3& velocity, const bool& toggleFriction);
+    void MoveCamera(unsigned char key, float speed);
+    float moveSpeed = 0.2f;
+    Vector3 Normalize(const Vector3& v);
 };

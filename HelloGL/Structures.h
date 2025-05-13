@@ -32,9 +32,9 @@ struct Vector3
 
 struct Camera
 {
-    Vector3 eye;
-    Vector3 center;
-    Vector3 up;
+    Vector3 eye; //position of the camera
+    Vector3 center; //where it's looking
+    Vector3 up; //up direction
 };
 
 struct Color
@@ -84,7 +84,9 @@ struct Material
     Vector4 specular;
     GLfloat shininess;
 };
-struct Glyph {
+
+struct Glyph
+{
     GLuint textureID;
     int width, height;
     int bearingX, bearingY;
